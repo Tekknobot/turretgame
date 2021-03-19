@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class TrackTargets : MonoBehaviour {
 
     [SerializeField] 
-    Transform[] targets;
+    //Transform[] targets;
+    public List<Transform> targets = new List<Transform>();
 
     [SerializeField] 
     float boundingBoxPadding = 2f;

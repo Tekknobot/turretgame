@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4545006086782266453}
   - component: {fileID: 4545006086782266452}
   - component: {fileID: 4545006086782266444}
+  - component: {fileID: -5960241618089678185}
   m_Layer: 11
   m_Name: Bomber_mini
   m_TagString: Enemy
@@ -95,6 +96,11 @@ MonoBehaviour:
   spawnLeft: {fileID: 0}
   spawnRight: {fileID: 0}
   Enemy: {fileID: 0}
+  mechLeft: {fileID: 0}
+  mechMiddle: {fileID: 0}
+  mechRight: {fileID: 0}
+  skyDrop: {fileID: 0}
+  skyDropEmitter: {fileID: 0}
 --- !u!114 &4545006086782266434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,3 +257,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeMagnitude: 0.2
+--- !u!114 &-5960241618089678185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4545006086782266455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7419b0e44c7c1e41b2b228716191b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

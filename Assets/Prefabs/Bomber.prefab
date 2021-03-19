@@ -18,7 +18,8 @@ GameObject:
   - component: {fileID: 5705093938014163619}
   - component: {fileID: 5705093938014163644}
   - component: {fileID: 5705093938014163645}
-  - component: {fileID: 5705093938014163621}
+  - component: {fileID: 891483511}
+  - component: {fileID: 643361347344917654}
   m_Layer: 11
   m_Name: Bomber
   m_TagString: Boss
@@ -80,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
@@ -102,11 +103,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletsAmount: 10
-  startAngle: 120
-  endAngle: 120
+  startAngle: 90
+  endAngle: 270
   repeatFire: 2
   repeatBomb: 0.5
+  repeatEnemy: 15
   Orb: {fileID: 4715538549366862638, guid: b0f6ef6a6c808ce4f9dbf1421b1b9cfa, type: 3}
+  duration: 15
+  bulletPool: {fileID: 0}
+  orbMiniSpeed: 2
+  missile: {fileID: 3154115654868491587, guid: 42c2a0ff8fe6c0947b570428d45f9587, type: 3}
+  spawnLeft: {fileID: 0}
+  spawnRight: {fileID: 0}
+  Enemy: {fileID: 4545006086782266455, guid: 5a047e622af85d34d94a13660a9ed844, type: 3}
+  mechLeft: {fileID: 0}
+  mechMiddle: {fileID: 0}
+  mechRight: {fileID: 0}
+  skyDrop: {fileID: 0}
+  skyDropEmitter: {fileID: 0}
 --- !u!114 &5705093938014163627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +247,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5705093938014163621
+--- !u!114 &891483511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,7 +256,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 5705093938014163646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99f4a09210758a641b4f0eb7ef327a00, type: 3}
+  m_Script: {fileID: 11500000, guid: a44c3cfc4647bbe409f2f63d02ddc8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeMagnitude: 0.2
+  target: {fileID: 0}
+  shakeDuration: 5
+  shakeAmount: 0.1
+  decreaseFactor: 1
+  shaketrue: 0
+--- !u!114 &643361347344917654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705093938014163646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7419b0e44c7c1e41b2b228716191b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

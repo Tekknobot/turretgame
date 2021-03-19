@@ -76,7 +76,6 @@ public class Target : MonoBehaviour
     {
         GetComponent<ObjectOscillator>().enabled = false;
         GetComponent<SmoothFollow>().enabled = false;
-        GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<FireBullets>().enabled = false;
     }
 
@@ -86,11 +85,10 @@ public class Target : MonoBehaviour
         Instantiate(explosionPrefab, explosionEmitter.transform.position, Quaternion.identity);
         if (nextBoss) {
             nextBoss.SetActive(true);
-            hitPointsText.color = Color.white;
             Destroy(gameObject);
         }
         else {
-            Destroy(gameObject);
+            Destroy(gameObject);            
         }
     }
 
@@ -111,8 +109,7 @@ public class Target : MonoBehaviour
             var spawnPos = transform.position + spawnDir * 3f; // Radius is just the distance away from the point
             
             Instantiate(explosionPrefab, spawnPos, Quaternion.identity);
-            GetComponent<ShakeBehavior>().enabled = true;
-            this.gameObject.SendMessage("TriggerShake", SendMessageOptions.RequireReceiver);
+            GetComponent<DaShake>().shaketrue = true;
             yield return new WaitForSeconds(0.2f);
         }    
         Death();    

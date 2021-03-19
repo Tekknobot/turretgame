@@ -9,7 +9,6 @@ public class Mech : MonoBehaviour
     public bool markerLeft;
     public bool markerMiddle;
     public bool markerRight;
-    public float mechSpeed;
 
     // Start is called before the first frame update
     public void Awake() {
@@ -20,7 +19,6 @@ public class Mech : MonoBehaviour
     void Update()
     {
         this.spriteRenderer.flipX = target.transform.position.x < this.transform.position.x;
-        mechSpeed = GetComponent<Rigidbody2D>().velocity.magnitude;
     }   
 
     void OnTriggerEnter2D(Collider2D col) {   

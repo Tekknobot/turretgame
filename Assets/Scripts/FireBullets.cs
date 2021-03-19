@@ -56,7 +56,7 @@ public class FireBullets : MonoBehaviour
     }
 
     void Update() {
-
+        
     }
 
     private void Fire() {
