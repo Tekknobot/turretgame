@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OmDrop : MonoBehaviour
 {
@@ -12,15 +13,18 @@ public class OmDrop : MonoBehaviour
 
     Coroutine PowerUpCoroutine;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //hasPowerup = false;
+    public Text omStatusText;
+
+    private static OmDrop omInstance;
+
+    void Start() {
+        omStatusText = GameObject.Find("OmStatus").GetComponent<Text>();
     }
 
     void OnTriggerEnter2D(Collider2D col) {   
         if(col.tag == "Player" && hasPowerup == false) {
             hasPowerup = true;
+            powerUpTime += 8;
             transform.parent.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             transform.parent.gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -29,28 +33,16 @@ public class OmDrop : MonoBehaviour
             col.GetComponent<flash>().flashDuration = 1f; 
             col.GetComponent<flash>().Flash();           
             Instantiate(rapidFireSFX, transform.position, Quaternion.identity);
-            powerUpTime += 10;
-            if (PowerUpCoroutine == null) {    
-                PowerUpCoroutine = StartCoroutine(DefaultFireRate(col));
-            }    
+            StartCoroutine(DefaultFireRate(col));    
         }  
     }
 
     IEnumerator DefaultFireRate(Collider2D col) {
-        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => powerUpTime <= 0);
         col.GetComponent<SpriteRenderer>().material.SetColor("_FlashColor", Color.red);
         col.GetComponent<flash>().flashDuration = 0.1f;   
-
-        while (powerUpTime > 0) {
-            powerUpTime = powerUpTime - 1 * Time.deltaTime;
-            yield return null;
-        }    
-
-        hasPowerup = false;
-
-        PowerUpCoroutine = null;
-        powerUpTime = 0;
        
+        hasPowerup = false;       
         col.transform.GetChild(2).gameObject.GetComponent<Shooting>().fireRate = 5f;        
         Instantiate(normalFireSFX, transform.position, Quaternion.identity);
         Destroy(transform.parent.gameObject);    

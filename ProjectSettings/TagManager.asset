@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - MechMarker
   - SkyDrop
+  - Om
   layers:
   - Default
   - TransparentFX

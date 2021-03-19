@@ -10,7 +10,7 @@ public class HealthDrop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     void OnTriggerEnter2D(Collider2D col) {   
@@ -21,7 +21,8 @@ public class HealthDrop : MonoBehaviour
             transform.parent.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             col.GetComponent<SpriteRenderer>().material.SetColor("_FlashColor", Color.white);
             col.GetComponent<flash>().flashDuration = 1f; 
-            col.GetComponent<flash>().Flash();           
+            col.GetComponent<flash>().Flash(); 
+            Instantiate(sfx, transform.position, Quaternion.identity);          
             StartCoroutine(DefaultFlash(col)); 
         }  
     }
@@ -29,8 +30,7 @@ public class HealthDrop : MonoBehaviour
     IEnumerator DefaultFlash(Collider2D col) {
         yield return new WaitForSeconds(1);
         col.GetComponent<SpriteRenderer>().material.SetColor("_FlashColor", Color.red);
-        col.GetComponent<flash>().flashDuration = 0.1f;
-        Instantiate(sfx, transform.position, Quaternion.identity); 
+        col.GetComponent<flash>().flashDuration = 0.1f; 
         Destroy(transform.parent.gameObject);           
     }    
 }

@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5608656794454754079}
   - component: {fileID: 682624803851630094}
-  - component: {fileID: 111582462854583718}
   m_Layer: 13
   m_Name: EmptyPoweUp
-  m_TagString: Untagged
+  m_TagString: Om
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,23 +57,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &111582462854583718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3783234796209639951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22807d695d28ecc4687b1e2469790f43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rapidFireSFX: {fileID: 152738540901050875, guid: 80c6cf2286d654047aef92d537d267b4,
-    type: 3}
-  normalFireSFX: {fileID: 152738540901050875, guid: e4d5a57c3fed35041baa80dbad9ad06c,
-    type: 3}
-  powerUpTime: 0
 --- !u!1 &7222256567538037478
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +75,7 @@ GameObject:
   - component: {fileID: 1169354341528849624}
   m_Layer: 0
   m_Name: RapidFirePowerUp
-  m_TagString: Untagged
+  m_TagString: Om
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,4 +252,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f67e21a9579a984eb542551cef30da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
+  time: 10
