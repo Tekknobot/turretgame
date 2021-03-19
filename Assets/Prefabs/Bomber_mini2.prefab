@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4545006086782266444}
   - component: {fileID: -5960241618089678185}
   m_Layer: 11
-  m_Name: Bomber_mini
+  m_Name: Bomber_mini2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,8 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a31580d62504fb47be43ea043f3a7a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMult: 5
-  rangeMult: 8
+  speedMult: -5
+  rangeMult: -8
 --- !u!114 &4545006086782266447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
   Orb: {fileID: 4715538549366862638, guid: b0f6ef6a6c808ce4f9dbf1421b1b9cfa, type: 3}
   duration: 15
   bulletPool: {fileID: 0}
-  orbMiniSpeed: 7
+  orbMiniSpeed: 0
   missile: {fileID: 3154115654868491587, guid: 42c2a0ff8fe6c0947b570428d45f9587, type: 3}
   spawnLeft: {fileID: 0}
   spawnRight: {fileID: 0}

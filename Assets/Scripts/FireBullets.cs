@@ -27,6 +27,7 @@ public class FireBullets : MonoBehaviour
     public GameObject spawnRight;
 
     public GameObject Enemy;
+    public GameObject Enemy2;
 
     public Transform mechLeft;
     public Transform mechMiddle;
@@ -92,6 +93,7 @@ public class FireBullets : MonoBehaviour
 
     private void DropEnemy() {
         Instantiate(Enemy, transform.position, Quaternion.identity);
+        Instantiate(Enemy2, transform.position, Quaternion.identity);
     }
 
     IEnumerator DropBombs() {
@@ -121,7 +123,7 @@ public class FireBullets : MonoBehaviour
     }
 
     IEnumerator DropBombsEnemy() {
-        InvokeRepeating("Fire", 0f, repeatFire);
+        InvokeRepeating("Drop", 0f, repeatBomb);
         GameObject.Find("BulletPool").GetComponent<BulletPool>().orbMiniSpeed = orbMiniSpeed;
         yield return null;
     }    
@@ -131,16 +133,17 @@ public class FireBullets : MonoBehaviour
         GetComponent<FireBullets>().repeatFire = 0;
         GetComponent<FireBullets>().repeatBomb = 0;
         InvokeRepeating("DropEnemy", 0f, repeatEnemy);
-        InvokeRepeating("Missile", 0f, repeatFire);
         yield return new WaitForSeconds(duration);
         CancelInvoke("DropEnemy");
-        CancelInvoke("Missile");
-        GetComponent<ObjectOscillator>().enabled = true;
-        GetComponent<FireBullets>().repeatFire = 1;
-        GetComponent<FireBullets>().repeatBomb = 0.3f;
-        InvokeRepeating("Fire", 0f, repeatFire);   
+        GetComponent<FireBullets>().repeatFire = 3;
+        GetComponent<FireBullets>().repeatBomb = 0.5f;
+        InvokeRepeating("Fire", 0f, repeatFire);
+        InvokeRepeating("Missile", 0f, repeatFire);
+        bulletPool.GetComponent<BulletPool>().orbMiniSpeed = orbMiniSpeed;   
         yield return new WaitForSeconds(duration);     
         CancelInvoke("Fire"); 
+        CancelInvoke("Missile"); 
+        GetComponent<ObjectOscillator>().enabled = true;
         InvokeRepeating("Drop", 0f, repeatBomb);
         yield return new WaitForSeconds(duration);
         CancelInvoke("Drop");

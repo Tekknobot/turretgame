@@ -2559,7 +2559,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: -10
   m_Sprite: {fileID: 874635058734849306, guid: 466cfa8f8a790c74ab4e0e1cf74dc065, type: 3}
   m_Color: {r: 0.5686275, g: 0.5686275, b: 0.5686275, a: 1}
   m_FlipX: 0
@@ -7027,7 +7027,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: -10
   m_Sprite: {fileID: 874635058734849306, guid: 466cfa8f8a790c74ab4e0e1cf74dc065, type: 3}
   m_Color: {r: 0.5686275, g: 0.5686275, b: 0.5686275, a: 1}
   m_FlipX: 0
@@ -11226,6 +11226,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1827097377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 910417616581038534, guid: e55a127b94e3b1d45b6e636601c21f84,
+    type: 3}
+  m_PrefabInstance: {fileID: 5422561792430760340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1827097391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827097377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2632e26b7e54e3047bb573ba674c836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1842153884
 GameObject:
   m_ObjectHideFlags: 0
@@ -12393,11 +12411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: nextBoss
       value: 
-      objectReference: {fileID: 1051983301}
+      objectReference: {fileID: 1827097377}
     - target: {fileID: 8444152783872354867, guid: d0fde9e199db7c547930d01afad36e6d,
         type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0fde9e199db7c547930d01afad36e6d, type: 3}
@@ -13294,6 +13312,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 127612274934219079, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: bulletPool
@@ -13309,6 +13332,37 @@ PrefabInstance:
       propertyPath: spawnRight
       value: 
       objectReference: {fileID: 1029752710}
+    - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: orbMiniSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: repeatFire
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: duration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: Enemy2
+      value: 
+      objectReference: {fileID: 4545006086782266455, guid: 7d846e95cb111944faee6453b1378a3a,
+        type: 3}
+    - target: {fileID: 805830392783567590, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 805830392783567590, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: hitPointsText
+      value: 
+      objectReference: {fileID: 816816408}
     - target: {fileID: 910417616581038533, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13374,6 +13428,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 910417616581038536, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195188085649457339, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195188085649457339, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: hitPointsText
+      value: 
+      objectReference: {fileID: 816816408}
     - target: {fileID: 1457406560578991710, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: hitPointsText
@@ -13384,6 +13453,76 @@ PrefabInstance:
       propertyPath: nextBoss
       value: 
       objectReference: {fileID: 1051983301}
+    - target: {fileID: 1974062965411786889, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056671875415821610, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056671875415821610, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: hitPointsText
+      value: 
+      objectReference: {fileID: 816816408}
+    - target: {fileID: 2769103330093610784, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769103330093610784, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: hitPointsText
+      value: 
+      objectReference: {fileID: 816816408}
+    - target: {fileID: 2861775085045465271, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204300639970740498, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260434706850625746, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260434706850625746, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: hitPointsText
+      value: 
+      objectReference: {fileID: 816816408}
+    - target: {fileID: 5536531846068281815, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536531846068281815, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: hitPointsText
+      value: 
+      objectReference: {fileID: 816816408}
+    - target: {fileID: 6995805168791972221, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097683613749081319, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7634415631811128442, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 9084881336624377264, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: target
@@ -13481,7 +13620,7 @@ PrefabInstance:
     - target: {fileID: 5705093938014163623, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5705093938014163627, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
@@ -13635,7 +13774,7 @@ PrefabInstance:
     - target: {fileID: 7145566463773037205, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7145566463773037207, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
