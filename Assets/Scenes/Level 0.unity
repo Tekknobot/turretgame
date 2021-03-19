@@ -12397,7 +12397,7 @@ PrefabInstance:
     - target: {fileID: 8444152783872354867, guid: d0fde9e199db7c547930d01afad36e6d,
         type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0fde9e199db7c547930d01afad36e6d, type: 3}
@@ -13481,7 +13481,7 @@ PrefabInstance:
     - target: {fileID: 5705093938014163623, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5705093938014163627, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
@@ -13611,6 +13611,12 @@ PrefabInstance:
       propertyPath: skyDropEmitter
       value: 
       objectReference: {fileID: 1477377491}
+    - target: {fileID: 7145566463773037198, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
+        type: 3}
+      propertyPath: skyDrop2
+      value: 
+      objectReference: {fileID: 7348094575995282566, guid: 2c36a07a4ce6c2c44b70b9a37b8c38ee,
+        type: 3}
     - target: {fileID: 7145566463773037201, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
       propertyPath: target

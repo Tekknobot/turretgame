@@ -35,16 +35,17 @@ public class Target : MonoBehaviour
     void Update() {
         float curHealthFloat = currentHealth;
 
-        if (gameObject.tag != "Crit") {
-            hitPointsText.text = Mathf.Round((curHealthFloat/maxHealth) * 100) + "%";
+        hitPointsText.text = Mathf.Round((curHealthFloat/maxHealth) * 100) + "%";
 
-            if ((curHealthFloat/maxHealth) * 100 <= 75f) {
-                hitPointsText.color = Color.yellow;
-            }
-            if ((curHealthFloat/maxHealth) * 100 <= 25f) {
-                hitPointsText.color = Color.red;
-            }  
-        }          
+        if ((curHealthFloat/maxHealth) * 100 <= 75f) {
+            hitPointsText.color = Color.yellow;
+        }
+        if ((curHealthFloat/maxHealth) * 100 <= 25f) {
+            hitPointsText.color = Color.red;
+        }    
+        if (currentHealth == maxHealth) {
+            hitPointsText.color = Color.white;
+        }               
     }
 
     public void TakeDamage (int amount)
@@ -77,6 +78,8 @@ public class Target : MonoBehaviour
         GetComponent<ObjectOscillator>().enabled = false;
         GetComponent<SmoothFollow>().enabled = false;
         GetComponent<FireBullets>().enabled = false;
+        GetComponent<SmoothFollow>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 
     void Death()

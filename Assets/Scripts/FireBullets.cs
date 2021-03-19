@@ -33,6 +33,7 @@ public class FireBullets : MonoBehaviour
     public Transform mechRight;
 
     public GameObject skyDrop;
+    public GameObject skyDrop2;
     public GameObject skyDropEmitter;
 
     // Start is called before the first frame update
@@ -169,6 +170,7 @@ public class FireBullets : MonoBehaviour
         GetComponent<flash>().flashDuration = 9f; 
         GetComponent<flash>().Flash();         
         Instantiate(skyDrop, skyDropEmitter.transform.position, Quaternion.identity);
+        Instantiate(skyDrop2, skyDropEmitter.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(9);
         GetComponent<BoxCollider2D>().enabled = true;
         GetComponent<SpriteRenderer>().material.SetColor("_FlashColor", Color.white);
