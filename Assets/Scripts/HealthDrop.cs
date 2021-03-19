@@ -22,8 +22,15 @@ public class HealthDrop : MonoBehaviour
             col.GetComponent<SpriteRenderer>().material.SetColor("_FlashColor", Color.white);
             col.GetComponent<flash>().flashDuration = 1f; 
             col.GetComponent<flash>().Flash();           
-            Instantiate(sfx, transform.position, Quaternion.identity); 
-            Destroy(transform.parent.gameObject); 
+            StartCoroutine(DefaultFlash(col)); 
         }  
     }
+
+    IEnumerator DefaultFlash(Collider2D col) {
+        yield return new WaitForSeconds(1);
+        col.GetComponent<SpriteRenderer>().material.SetColor("_FlashColor", Color.red);
+        col.GetComponent<flash>().flashDuration = 0.1f;
+        Instantiate(sfx, transform.position, Quaternion.identity); 
+        Destroy(transform.parent.gameObject);           
+    }    
 }
