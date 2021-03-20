@@ -12,6 +12,7 @@ public class Orb_mini : MonoBehaviour
 
     private void OnEnable() {
         Invoke("Destroy", 10f);
+        Invoke("EnableCircleCollider2D", 0.75f);
     }
 
     // Start is called before the first frame update
@@ -33,6 +34,10 @@ public class Orb_mini : MonoBehaviour
     private void Destroy() {
         gameObject.SetActive(false);
     }
+
+    private void EnableCircleCollider2D() {
+        GetComponent<CircleCollider2D>().enabled = true;
+    }    
 
     private void OnDisable() {
         CancelInvoke();
