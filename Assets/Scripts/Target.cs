@@ -26,32 +26,29 @@ public class Target : MonoBehaviour
 
     void Start() {
 		currentHealth = maxHealth;
-		//healthBar.SetMaxHealth(maxHealth);
-
-        //GetComponent<ObjectOscillator>().enabled = true;        
-        //GetComponent<BoxCollider2D>().enabled = true;
     }
 
     void Update() {
-        float curHealthFloat = currentHealth;
+        if (gameObject.tag == "Boss") {
+            float curHealthFloat = currentHealth;
 
-        hitPointsText.text = Mathf.Round((curHealthFloat/maxHealth) * 100) + "%";
+            hitPointsText.text = Mathf.Round((curHealthFloat/maxHealth) * 100) + "%";
 
-        if ((curHealthFloat/maxHealth) * 100 <= 75f) {
-            hitPointsText.color = Color.yellow;
-        }
-        if ((curHealthFloat/maxHealth) * 100 <= 25f) {
-            hitPointsText.color = Color.red;
-        }    
-        if (currentHealth == maxHealth) {
-            hitPointsText.color = Color.white;
+            if ((curHealthFloat/maxHealth) * 100 <= 75f) {
+                hitPointsText.color = Color.yellow;
+            }
+            if ((curHealthFloat/maxHealth) * 100 <= 25f) {
+                hitPointsText.color = Color.red;
+            }    
+            if (currentHealth == maxHealth) {
+                hitPointsText.color = Color.white;
+            }
         }               
     }
 
     public void TakeDamage (int amount)
     {
         currentHealth -= amount;
-        //healthBar.SetHealth(currentHealth);
         if (currentHealth <= 0f && explosionTaskStarted == false)
         {
             if (gameObject.tag == "Crit") {
@@ -84,7 +81,6 @@ public class Target : MonoBehaviour
 
     void Death()
     {       
-        //GetComponent<LootDrop>().LootChance();
         Instantiate(explosionPrefab, explosionEmitter.transform.position, Quaternion.identity);
         if (nextBoss) {
             nextBoss.SetActive(true);

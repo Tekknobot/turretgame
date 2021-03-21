@@ -28,6 +28,7 @@ public class PowerUps : MonoBehaviour
             if(powerUpTime <= 0)
             {
                 powerUpTime = 0;
+                Instantiate(normalFireSFX, transform.position, Quaternion.identity);
                 hasPowerup = false;
             }
         }
@@ -58,7 +59,6 @@ public class PowerUps : MonoBehaviour
        
         hasPowerup = false;       
         transform.GetChild(2).gameObject.GetComponent<Shooting>().fireRate = 5f;        
-        Instantiate(normalFireSFX, transform.position, Quaternion.identity);
         Destroy(col.transform.parent.gameObject);    
     }    
 }
