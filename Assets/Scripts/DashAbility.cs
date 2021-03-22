@@ -13,7 +13,7 @@ using ActionCode2D.Renderers;
     public float dashSpeed = 6;
     CharacterController2D controller;
  
-     
+    public GameObject dashSFX;    
  
     private void Awake()
     {
@@ -26,7 +26,8 @@ using ActionCode2D.Renderers;
         {
             currentDashTime = 0;
             GetComponent<PlayerMovement>().enabled = false;
-            //GetComponent<CircleCollider2D>().enabled = false;                            
+            Instantiate(dashSFX, transform.position, Quaternion.identity);
+            GetComponent<CircleCollider2D>().enabled = false;                            
         }
         if(currentDashTime < maxDashTime)
         {
@@ -37,7 +38,7 @@ using ActionCode2D.Renderers;
         {
             moveDirection = 0;
             GetComponent<PlayerMovement>().enabled = true; 
-            //GetComponent<CircleCollider2D>().enabled = true;         
+            GetComponent<CircleCollider2D>().enabled = true;         
         }
         controller.Move(moveDirection * Time.fixedDeltaTime, false, false);
     }
