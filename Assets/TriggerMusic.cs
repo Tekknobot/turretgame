@@ -29,21 +29,21 @@ public class TriggerMusic : MonoBehaviour
     void Update()
     {
         if (songChanged1 == false) {
-            if (bomber.GetComponent<Target>().currentHealth <= 0) {
+            if (bomber.GetComponent<Target>().currentHealth <= 0 && bomber.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song2);
                 songChanged1 = true;
             }
         }
 
         if (songChanged2 == false) {
-            if (pharaoh.GetComponent<Target>().currentHealth <= 0) {
+            if (pharaoh.GetComponent<Target>().currentHealth <= 0 && pharaoh.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song3);
                 songChanged2 = true;
             }
         }
 
         if (songChanged3 == false) {
-            if (alpha.GetComponent<Target>().currentHealth <= 0) {
+            if (alpha.GetComponent<Target>().currentHealth <= 0 && alpha.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song4);
                 songChanged3 = true;
             }

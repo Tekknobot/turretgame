@@ -13482,6 +13482,11 @@ PrefabInstance:
       propertyPath: nextBoss
       value: 
       objectReference: {fileID: 1051983301}
+    - target: {fileID: 1457406560578991710, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1974062965411786889, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: m_SortingOrder
@@ -13649,7 +13654,7 @@ PrefabInstance:
     - target: {fileID: 5705093938014163623, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5705093938014163627, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
@@ -13794,6 +13799,11 @@ PrefabInstance:
       propertyPath: hitPointsText
       value: 
       objectReference: {fileID: 816816408}
+    - target: {fileID: 7145566463773037205, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
+        type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7145566463773037207, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
       propertyPath: m_LocalPosition.x
