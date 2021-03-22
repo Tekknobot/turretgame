@@ -58,7 +58,6 @@ public class PowerUps : MonoBehaviour
         GetComponent<flash>().flashDuration = 0.1f;   
        
         hasPowerup = false;       
-        transform.GetChild(2).gameObject.GetComponent<Shooting>().fireRate = 5f;        
-        Destroy(col.transform.parent.gameObject);    
+        transform.GetChild(2).gameObject.GetComponent<Shooting>().fireRate = 5f;            
     }    
 }
