@@ -4593,7 +4593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &693557055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12697,6 +12697,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 152738540901050875, guid: 8a57a88e58fb8854abf2b7cba3f33d27,
         type: 3}
+    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
+      propertyPath: dashSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
+      propertyPath: dashTimer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
+      propertyPath: maxDash
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
+      propertyPath: smoothTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
+      propertyPath: moveDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
+      propertyPath: dashStoppingSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5185620909583790746, guid: 5de4e3ec0d8520c4ebb80c2895157921,
         type: 3}
       propertyPath: m_Enabled
@@ -12707,6 +12735,16 @@ PrefabInstance:
       propertyPath: hitPointsText
       value: 
       objectReference: {fileID: 2021906640}
+    - target: {fileID: 5185620909583790751, guid: 5de4e3ec0d8520c4ebb80c2895157921,
+        type: 3}
+      propertyPath: runSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185620909583790751, guid: 5de4e3ec0d8520c4ebb80c2895157921,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5185620909583790755, guid: 5de4e3ec0d8520c4ebb80c2895157921,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13104,7 +13142,7 @@ PrefabInstance:
     - target: {fileID: 5705093938014163646, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5173add66582b7441986cb98063519b2, type: 3}

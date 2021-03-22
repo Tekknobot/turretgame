@@ -1059,7 +1059,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TURRET HELL
+  m_Text: BULLET HELL.
 --- !u!222 &1215579126
 CanvasRenderer:
   m_ObjectHideFlags: 0

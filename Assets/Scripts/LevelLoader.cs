@@ -20,7 +20,7 @@ public class LevelLoader : MonoBehaviour
             Button playbtn = playButton.GetComponent<Button>();
             playbtn.onClick.AddListener(PlayOnClick);
 
-            Button quitbtn = playButton.GetComponent<Button>();
+            Button quitbtn = quitButton.GetComponent<Button>();
             quitbtn.onClick.AddListener(QuitOnClick);        
         }
     }

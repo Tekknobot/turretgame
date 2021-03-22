@@ -27,8 +27,12 @@ using ActionCode2D.Renderers;
             currentDashTime = 0;
             GetComponent<PlayerMovement>().enabled = false;
             Instantiate(dashSFX, transform.position, Quaternion.identity);
-            GetComponent<CircleCollider2D>().enabled = false;                            
+            GetComponent<CircleCollider2D>().enabled = false; 
+            GetComponent<Rigidbody2D>().gravityScale = 0;                           
         }
+    }
+
+    void FixedUpdate() {
         if(currentDashTime < maxDashTime)
         {
             moveDirection = Input.GetAxisRaw("Horizontal") * dashSpeed;
@@ -37,9 +41,12 @@ using ActionCode2D.Renderers;
         else
         {
             moveDirection = 0;
+            currentDashTime = 0;
             GetComponent<PlayerMovement>().enabled = true; 
-            GetComponent<CircleCollider2D>().enabled = true;         
-        }
-        controller.Move(moveDirection * Time.fixedDeltaTime, false, false);
+            GetComponent<CircleCollider2D>().enabled = true;
+            GetComponent<Rigidbody2D>().gravityScale = 1;         
+        }    
+
+        controller.Move(moveDirection * Time.fixedDeltaTime, false, false);    
     }
 }     

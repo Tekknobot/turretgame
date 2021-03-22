@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 5185620909583790746}
   - component: {fileID: 2109890497}
   - component: {fileID: 913914707}
+  - component: {fileID: 539318375}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -185,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 5185620909583790754}
   animator: {fileID: 5185620909583790758}
-  runSpeed: 20
+  runSpeed: 200
 --- !u!212 &5185620909583790756
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -466,8 +467,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: 0
-  dashStoppingSpeed: 0.03
-  dashSpeed: 175
+  dashStoppingSpeed: 0.2
+  dashSpeed: 1000
+  dashSFX: {fileID: 152738540901050875, guid: 8a57a88e58fb8854abf2b7cba3f33d27, type: 3}
 --- !u!114 &913914707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,6 +488,24 @@ MonoBehaviour:
   targetB: {r: 0.6226415, g: 0, b: 0, a: 1}
   sourceC: {r: 0.6784314, g: 0.65882355, b: 0.38431376, a: 1}
   targetC: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &539318375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5185620909583790759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979dcfe7de9a61d4a953eee17ca08f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rapidFireSFX: {fileID: 152738540901050875, guid: 80c6cf2286d654047aef92d537d267b4,
+    type: 3}
+  normalFireSFX: {fileID: 152738540901050875, guid: e4d5a57c3fed35041baa80dbad9ad06c,
+    type: 3}
+  powerUpTime: 0
+  omStatusText: {fileID: 0}
 --- !u!1 &5185620909755301392
 GameObject:
   m_ObjectHideFlags: 0
