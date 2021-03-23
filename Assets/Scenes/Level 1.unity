@@ -5806,10 +5806,12 @@ MonoBehaviour:
   song2: {fileID: 8300000, guid: 361c576274f4e614b950e9ba467a7eda, type: 3}
   song3: {fileID: 8300000, guid: b9886198b11cd3d4d8a49ff863994a05, type: 3}
   song4: {fileID: 8300000, guid: d5e30cd5c2a729f47916ad13169eab4b, type: 3}
+  song5: {fileID: 8300000, guid: 69eafd544720ef147a17aa6711cd8213, type: 3}
   bomber: {fileID: 985421272}
   pharaoh: {fileID: 1119619483}
   alpha: {fileID: 1827097377}
   mech: {fileID: 1051983301}
+  lunatic: {fileID: 7940236295562540229}
 --- !u!114 &862202427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13635,6 +13637,11 @@ PrefabInstance:
       propertyPath: hitPointsText
       value: 
       objectReference: {fileID: 816816408}
+    - target: {fileID: 2041130924503338317, guid: a1c2774df705c2f4ebc147080cd1f9f1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 2041130924503338319, guid: a1c2774df705c2f4ebc147080cd1f9f1,
         type: 3}
       propertyPath: m_LocalPosition.x

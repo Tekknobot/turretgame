@@ -193,6 +193,7 @@ public class FireBullets : MonoBehaviour
     IEnumerator DropBombsLunatic() {
         yield return new WaitForSeconds(5);
         InvokeRepeating("Fire", 0f, repeatFire);
+        InvokeRepeating("Missile", 0f, repeatFire);
         yield return new WaitForSeconds(5);
         GetComponent<SmoothFollow>().enabled = true;  
         GetComponent<SmoothFollow>().dampTime = 0.5f;
@@ -207,6 +208,7 @@ public class FireBullets : MonoBehaviour
         GetComponent<SmoothFollow>().target = mechMiddle;  
         yield return new WaitUntil(() => GetComponent<Mech>().markerMiddle == true);  
         CancelInvoke("Fire");   
+        CancelInvoke("Missile");
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SmoothFollow>().enabled = true;  
         GetComponent<SmoothFollow>().dampTime = 0.5f;
