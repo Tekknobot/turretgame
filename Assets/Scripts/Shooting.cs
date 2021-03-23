@@ -18,6 +18,8 @@ public class Shooting : MonoBehaviour
 
     public Animator animator;
 
+    float horizontalMove = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,13 +29,17 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        horizontalMove = Input.GetAxisRaw("Horizontal");
+
         if (Input.GetButton("Fire1") && !player.GetComponent<CharacterController2D>().m_FacingRight) {
             transform.rotation = Quaternion.Euler(0, 180, 0);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
             animator.SetBool("isShooting", true);
             Shoot();
         } 
         else if (Input.GetButton("Fire1") && player.GetComponent<CharacterController2D>().m_FacingRight) {
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
             animator.SetBool("isShooting", true);
             Shoot();    
         }
@@ -45,25 +51,53 @@ public class Shooting : MonoBehaviour
             animator.SetBool("isShootingUp", true);
             animator.SetBool("isShooting", false);
             transform.rotation = Quaternion.Euler(0, 0, 90);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
             ShootUp();
         }
         else {
             animator.SetBool("isShootingUp", false);
         }
 
-        if (Input.GetButton("Fire2") && player.GetComponent<CharacterController2D>().m_FacingRight) {
+        if (Input.GetButton("Fire2") && player.GetComponent<CharacterController2D>().m_FacingRight && horizontalMove == 0) {
             transform.rotation = Quaternion.Euler(0, 0, 45);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
             animator.SetBool("isShooting45", true);
             Shoot45();
         }
-        else if (Input.GetButton("Fire3") && !player.GetComponent<CharacterController2D>().m_FacingRight) {
+        else if (Input.GetButton("Fire3") && !player.GetComponent<CharacterController2D>().m_FacingRight && horizontalMove == 0) {
             transform.rotation = Quaternion.Euler(0, 0, 135);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
             animator.SetBool("isShooting45", true);
             Shoot45();
         }
+        else if (Input.GetButton("Fire2") && player.GetComponent<CharacterController2D>().m_FacingRight && horizontalMove > 0) {
+            transform.rotation = Quaternion.Euler(0, 0, 45);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+            animator.SetBool("isShooting45", true);
+            Shoot45();
+        }   
+        else if (Input.GetButton("Fire3") && !player.GetComponent<CharacterController2D>().m_FacingRight && horizontalMove < 0) {
+            transform.rotation = Quaternion.Euler(0, 0, 135);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+            animator.SetBool("isShooting45", true);
+            Shoot45();
+        }                     
+        else if (Input.GetButton("Fire2") && horizontalMove < 0) {
+            transform.rotation = Quaternion.Euler(0, 0, 45);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
+            animator.SetBool("isShooting45", true);
+            Shoot45();
+        }
+        else if (Input.GetButton("Fire3") && horizontalMove > 0) {
+            transform.rotation = Quaternion.Euler(0, 0, 135);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
+            animator.SetBool("isShooting45", true);
+            Shoot45();
+        }                
         else {
             animator.SetBool("isShooting45", false);
-        }        
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+        }          
     }
 
     void Shoot() {
