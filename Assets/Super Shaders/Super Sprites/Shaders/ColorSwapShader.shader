@@ -13,6 +13,10 @@
 		_TargetB("Target B", Color) = (1,0,0,1)
 		_SourceC("Source C", Color) = (0,0,1,1)
 		_TargetC("Target C", Color) = (1,0,0,1)
+		_SourceC("Source D", Color) = (0,0,1,1)
+		_TargetC("Target D", Color) = (1,0,0,1)	
+		_SourceC("Source E", Color) = (0,0,1,1)
+		_TargetC("Target E", Color) = (1,0,0,1)				
 
 		[HideInInspector] _RendererColor("RendererColor", Color) = (1,1,1,1)
 		[HideInInspector] _Flip("Flip", Vector) = (1,1,1,1)
@@ -55,6 +59,10 @@
 			float4 _TargetB;
 			float4 _SourceC;
 			float4 _TargetC;
+			float4 _SourceD;
+			float4 _TargetD;
+			float4 _SourceE;
+			float4 _TargetE;						
 
 			fixed4 frag(v2f IN) : SV_Target
 			{
@@ -80,6 +88,20 @@
 				{
 					c.rgb = _TargetC.rgb;
 				}
+
+				// color swap d
+				if (c.r >= _SourceD.r - 0.005 && c.r <= _SourceD.r + 0.005 && c.g >= _SourceD.g - 0.005 &&
+					c.g <= _SourceD.g + 0.005 && c.b >= _SourceD.b - 0.005 && c.b <= _SourceD.b + 0.005)
+				{
+					c.rgb = _TargetD.rgb;
+				}	
+
+				// color swap e
+				if (c.r >= _SourceE.r - 0.005 && c.r <= _SourceE.r + 0.005 && c.g >= _SourceE.g - 0.005 &&
+					c.g <= _SourceE.g + 0.005 && c.b >= _SourceE.b - 0.005 && c.b <= _SourceE.b + 0.005)
+				{
+					c.rgb = _TargetE.rgb;
+				}								
 
 				c.rgb *= c.a;
 

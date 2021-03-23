@@ -3587,24 +3587,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5185620910122543871}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &539318375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539318360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 979dcfe7de9a61d4a953eee17ca08f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rapidFireSFX: {fileID: 152738540901050875, guid: 80c6cf2286d654047aef92d537d267b4,
-    type: 3}
-  normalFireSFX: {fileID: 152738540901050875, guid: e4d5a57c3fed35041baa80dbad9ad06c,
-    type: 3}
-  powerUpTime: 0
-  omStatusText: {fileID: 0}
 --- !u!1 &594507527
 GameObject:
   m_ObjectHideFlags: 0
@@ -12693,58 +12675,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
-      propertyPath: dashSFX
-      value: 
-      objectReference: {fileID: 152738540901050875, guid: 8a57a88e58fb8854abf2b7cba3f33d27,
-        type: 3}
-    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
-      propertyPath: dashSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
-      propertyPath: dashTimer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
-      propertyPath: maxDash
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
-      propertyPath: smoothTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
-      propertyPath: moveDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
       propertyPath: dashStoppingSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185620909583790746, guid: 5de4e3ec0d8520c4ebb80c2895157921,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 5185620909583790748, guid: 5de4e3ec0d8520c4ebb80c2895157921,
         type: 3}
       propertyPath: hitPointsText
       value: 
       objectReference: {fileID: 2021906640}
-    - target: {fileID: 5185620909583790751, guid: 5de4e3ec0d8520c4ebb80c2895157921,
-        type: 3}
-      propertyPath: runSpeed
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185620909583790751, guid: 5de4e3ec0d8520c4ebb80c2895157921,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5185620909583790755, guid: 5de4e3ec0d8520c4ebb80c2895157921,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13142,7 +13080,7 @@ PrefabInstance:
     - target: {fileID: 5705093938014163646, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5173add66582b7441986cb98063519b2, type: 3}
