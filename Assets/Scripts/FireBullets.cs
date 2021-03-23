@@ -32,6 +32,8 @@ public class FireBullets : MonoBehaviour
     public Transform mechLeft;
     public Transform mechMiddle;
     public Transform mechRight;
+    public Transform mechTop;
+    public Transform mechBottom;
 
     public GameObject skyDrop;
     public GameObject skyDrop2;
@@ -40,7 +42,7 @@ public class FireBullets : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GetComponent<Transform>().tag == "Boss" && this.name != "Alpha" && this.name != "Mech") {
+        if (GetComponent<Transform>().tag == "Boss" && this.name != "Alpha" && this.name != "Mech" && this.name != "Lunatic") {
             StartCoroutine(DropBombs());
         }
 
@@ -54,7 +56,11 @@ public class FireBullets : MonoBehaviour
 
         if (this.name == "Mech" && GetComponent<Transform>().tag == "Boss") {
             StartCoroutine(DropBombsMech());
-        }              
+        }   
+
+        if (this.name == "Lunatic" && GetComponent<Transform>().tag == "Boss") {
+            StartCoroutine(DropBombsLunatic());
+        }                   
     }
 
     void Update() {
@@ -124,7 +130,6 @@ public class FireBullets : MonoBehaviour
 
     IEnumerator DropBombsEnemy() {
         InvokeRepeating("Drop", 0f, repeatBomb);
-        GameObject.Find("BulletPool").GetComponent<BulletPool>().orbMiniSpeed = orbMiniSpeed;
         yield return null;
     }    
 
@@ -183,5 +188,41 @@ public class FireBullets : MonoBehaviour
         foreach(GameObject skyDropObject in skyDrops)
         GameObject.Destroy(skyDropObject);
         StartCoroutine(DropBombsMech());             
-    }       
+    }
+
+    IEnumerator DropBombsLunatic() {
+        yield return new WaitForSeconds(5);
+        InvokeRepeating("Fire", 0f, repeatFire);
+        yield return new WaitForSeconds(5);
+        GetComponent<SmoothFollow>().enabled = true;  
+        GetComponent<SmoothFollow>().dampTime = 0.5f;
+        GetComponent<SmoothFollow>().target = mechLeft; 
+        yield return new WaitForSeconds(5);
+        GetComponent<SmoothFollow>().enabled = true;  
+        GetComponent<SmoothFollow>().dampTime = 0.5f;
+        GetComponent<SmoothFollow>().target = mechRight;   
+        yield return new WaitForSeconds(5);
+        GetComponent<SmoothFollow>().enabled = true;  
+        GetComponent<SmoothFollow>().dampTime = 0.5f;
+        GetComponent<SmoothFollow>().target = mechMiddle;  
+        yield return new WaitUntil(() => GetComponent<Mech>().markerMiddle == true);  
+        CancelInvoke("Fire");   
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<SmoothFollow>().enabled = true;  
+        GetComponent<SmoothFollow>().dampTime = 0.5f;
+        GetComponent<SmoothFollow>().target = mechTop;                 
+        Instantiate(skyDrop, skyDropEmitter.transform.position, Quaternion.identity);
+        Instantiate(skyDrop2, skyDropEmitter.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(9);
+        GetComponent<BoxCollider2D>().enabled = true; 
+        GameObject.FindGameObjectWithTag("SkyDrop").GetComponent<SkyDrop>().CancelInvoke("StartSkyDrop");      
+        GameObject[] skyDrops = GameObject.FindGameObjectsWithTag("SkyDrop");
+        foreach(GameObject skyDropObject in skyDrops)
+        GameObject.Destroy(skyDropObject);  
+        GetComponent<BoxCollider2D>().enabled = true;
+        GetComponent<SmoothFollow>().enabled = true;  
+        GetComponent<SmoothFollow>().dampTime = 0.5f;
+        GetComponent<SmoothFollow>().target = mechLeft;                      
+        StartCoroutine(DropBombsLunatic());
+    }            
 }

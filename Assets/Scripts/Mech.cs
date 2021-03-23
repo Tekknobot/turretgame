@@ -9,6 +9,8 @@ public class Mech : MonoBehaviour
     public bool markerLeft;
     public bool markerMiddle;
     public bool markerRight;
+    public bool markerTop;
+    public bool markerBottom;    
 
     // Start is called before the first frame update
     public void Awake() {
@@ -32,7 +34,15 @@ public class Mech : MonoBehaviour
 
         if(col.tag == "MechMarker" && col.name == "MechRight") {
             markerRight = true;
-        }                 
+        } 
+
+        if(col.tag == "MechMarker" && col.name == "MechTop") {
+            markerTop = true;
+        } 
+
+        if(col.tag == "MechMarker" && col.name == "MechBottom") {
+            markerBottom = true;
+        }                      
     }   
 
     void OnTriggerExit2D(Collider2D col) {   
@@ -46,6 +56,14 @@ public class Mech : MonoBehaviour
 
         if(col.tag == "MechMarker" && col.name == "MechRight") {
             markerRight = false;
-        }                 
+        }    
+
+        if(col.tag == "MechMarker" && col.name == "MechTop") {
+            markerTop = false;
+        } 
+
+        if(col.tag == "MechMarker" && col.name == "MechBottom") {
+            markerBottom = false;
+        }                        
     }      
 }
