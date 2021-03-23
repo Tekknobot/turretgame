@@ -179,7 +179,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5185620909583790759}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dd1875170fbf6d4782cccc1c1de46c6, type: 3}
   m_Name: 
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: 0
-  dashStoppingSpeed: 0.2
+  dashStoppingSpeed: 0.15
   dashSpeed: 1000
   dashSFX: {fileID: 152738540901050875, guid: 8a57a88e58fb8854abf2b7cba3f33d27, type: 3}
 --- !u!114 &913914707
@@ -488,6 +488,10 @@ MonoBehaviour:
   targetB: {r: 0.6226415, g: 0, b: 0, a: 1}
   sourceC: {r: 0.6784314, g: 0.65882355, b: 0.38431376, a: 1}
   targetC: {r: 1, g: 0, b: 0, a: 1}
+  sourceD: {r: 0, g: 0, b: 1, a: 1}
+  targetD: {r: 1, g: 0, b: 0, a: 1}
+  sourceE: {r: 0, g: 0, b: 1, a: 1}
+  targetE: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &539318375
 MonoBehaviour:
   m_ObjectHideFlags: 0

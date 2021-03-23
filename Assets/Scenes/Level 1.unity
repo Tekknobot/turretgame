@@ -12674,10 +12674,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2109890497, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
-      propertyPath: dashStoppingSpeed
-      value: 0.15
-      objectReference: {fileID: 0}
     - target: {fileID: 5185620909583790748, guid: 5de4e3ec0d8520c4ebb80c2895157921,
         type: 3}
       propertyPath: hitPointsText
