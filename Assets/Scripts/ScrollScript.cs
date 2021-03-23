@@ -5,16 +5,17 @@ using UnityEngine;
 public class ScrollScript : MonoBehaviour
 {
     public float scrollSpeed = 1f;
-    float spriteSize;
+    public float offset;
     Vector2 startPos;
+    private float newXposition;
 
     void Start() {
         startPos = transform.position;
-        spriteSize = gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
+        offset = gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
     void Update() {
-        float newPos = Mathf.Repeat (Time.time * scrollSpeed, spriteSize);
-        transform.position = startPos + Vector2.right * newPos;
+        newXposition = Mathf.Repeat (Time.time * scrollSpeed, offset);
+        transform.position = startPos + Vector2.right * newXposition;
     }
 }
