@@ -144,6 +144,8 @@ MonoBehaviour:
   markerLeft: 0
   markerMiddle: 0
   markerRight: 0
+  markerTop: 0
+  markerBottom: 0
 --- !u!114 &7145566463773037203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +265,8 @@ MonoBehaviour:
   mechLeft: {fileID: 0}
   mechMiddle: {fileID: 0}
   mechRight: {fileID: 0}
+  mechTop: {fileID: 0}
+  mechBottom: {fileID: 0}
   skyDrop: {fileID: 7348094575995282566, guid: 4767e50e6ecec4843ac836340ba1124e, type: 3}
   skyDrop2: {fileID: 7348094575995282566, guid: 2c36a07a4ce6c2c44b70b9a37b8c38ee,
     type: 3}

@@ -4387,7 +4387,7 @@ SpriteRenderer:
   m_SortingOrder: -50
   m_Sprite: {fileID: -1019491336629384071, guid: 72b184dd6358c7745a8d14956a189ebe,
     type: 3}
-  m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4405,7 +4405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643375298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.36, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7000,18 +7000,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2001898140}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1119619495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119619483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7419b0e44c7c1e41b2b228716191b7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1124963332
 GameObject:
   m_ObjectHideFlags: 0
@@ -11012,18 +11000,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5422561792430760340}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1827097391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827097377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2632e26b7e54e3047bb573ba674c836d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1842153884
 GameObject:
   m_ObjectHideFlags: 0
@@ -12222,11 +12198,6 @@ PrefabInstance:
       propertyPath: nextBoss
       value: 
       objectReference: {fileID: 1827097377}
-    - target: {fileID: 8444152783872354867, guid: d0fde9e199db7c547930d01afad36e6d,
-        type: 3}
-      propertyPath: maxHealth
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0fde9e199db7c547930d01afad36e6d, type: 3}
 --- !u!1 &2021906638
@@ -13049,6 +13020,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5185620909583790759, guid: 5de4e3ec0d8520c4ebb80c2895157921,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
 --- !u!1001 &5422561792430760340
@@ -13058,11 +13034,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 127612274934219079, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -4
-      objectReference: {fileID: 0}
     - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: bulletPool
@@ -13078,32 +13049,6 @@ PrefabInstance:
       propertyPath: spawnRight
       value: 
       objectReference: {fileID: 1029752710}
-    - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: orbMiniSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: repeatFire
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: duration
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 388946786555854981, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: Enemy2
-      value: 
-      objectReference: {fileID: 4545006086782266455, guid: 7d846e95cb111944faee6453b1378a3a,
-        type: 3}
-    - target: {fileID: 805830392783567590, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 805830392783567590, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: hitPointsText
@@ -13174,16 +13119,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 910417616581038536, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1195188085649457339, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 1195188085649457339, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: hitPointsText
@@ -13199,21 +13134,6 @@ PrefabInstance:
       propertyPath: nextBoss
       value: 
       objectReference: {fileID: 1051983301}
-    - target: {fileID: 1457406560578991710, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: maxHealth
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1974062965411786889, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056671875415821610, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2056671875415821610, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: hitPointsText
@@ -13221,29 +13141,9 @@ PrefabInstance:
       objectReference: {fileID: 816816408}
     - target: {fileID: 2769103330093610784, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2769103330093610784, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
       propertyPath: hitPointsText
       value: 
       objectReference: {fileID: 816816408}
-    - target: {fileID: 2861775085045465271, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204300639970740498, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5260434706850625746, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5260434706850625746, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: hitPointsText
@@ -13251,29 +13151,9 @@ PrefabInstance:
       objectReference: {fileID: 816816408}
     - target: {fileID: 5536531846068281815, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5536531846068281815, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
       propertyPath: hitPointsText
       value: 
       objectReference: {fileID: 816816408}
-    - target: {fileID: 6995805168791972221, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7097683613749081319, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7634415631811128442, guid: e55a127b94e3b1d45b6e636601c21f84,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -4
-      objectReference: {fileID: 0}
     - target: {fileID: 9084881336624377264, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: target
@@ -13358,11 +13238,6 @@ PrefabInstance:
       propertyPath: spawnRight
       value: 
       objectReference: {fileID: 1029752710}
-    - target: {fileID: 5705093938014163620, guid: 5173add66582b7441986cb98063519b2,
-        type: 3}
-      propertyPath: Enemy
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5705093938014163623, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
       propertyPath: hitPointsText
@@ -13373,11 +13248,6 @@ PrefabInstance:
       propertyPath: nextBoss
       value: 
       objectReference: {fileID: 1119619483}
-    - target: {fileID: 5705093938014163623, guid: 5173add66582b7441986cb98063519b2,
-        type: 3}
-      propertyPath: maxHealth
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 5705093938014163627, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
       propertyPath: target
@@ -13523,14 +13393,14 @@ PrefabInstance:
       objectReference: {fileID: 816816408}
     - target: {fileID: 7145566463773037205, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145566463773037205, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
-        type: 3}
       propertyPath: nextBoss
       value: 
       objectReference: {fileID: 7940236295562540229}
+    - target: {fileID: 7145566463773037205, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
+        type: 3}
+      propertyPath: maxHealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 7145566463773037207, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13596,8 +13466,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1051983316, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4, type: 3}
 --- !u!1 &7940236295562540229 stripped
 GameObject:
@@ -13637,11 +13506,6 @@ PrefabInstance:
       propertyPath: hitPointsText
       value: 
       objectReference: {fileID: 816816408}
-    - target: {fileID: 2041130924503338317, guid: a1c2774df705c2f4ebc147080cd1f9f1,
-        type: 3}
-      propertyPath: maxHealth
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 2041130924503338319, guid: a1c2774df705c2f4ebc147080cd1f9f1,
         type: 3}
       propertyPath: m_LocalPosition.x

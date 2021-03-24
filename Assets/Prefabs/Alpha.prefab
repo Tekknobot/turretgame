@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1859906801388783399, guid: c867f37c318efbd42ac774e34cf67c86,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 10
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 4871924904212905891}
   - component: {fileID: 9147008459530371845}
   - component: {fileID: 5422561792733936146}
+  - component: {fileID: 1827097391}
   m_Layer: 11
   m_Name: Alpha
   m_TagString: Boss
@@ -234,7 +235,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 8592538771932838920, guid: 34fd96c448dacfe41b724c39119c7e74,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -333,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
@@ -357,21 +358,25 @@ MonoBehaviour:
   bulletsAmount: 10
   startAngle: 90
   endAngle: 270
-  repeatFire: 1
+  repeatFire: 3
   repeatBomb: 0.5
   repeatEnemy: 25
   Orb: {fileID: 4715538549366862638, guid: b0f6ef6a6c808ce4f9dbf1421b1b9cfa, type: 3}
-  duration: 15
+  duration: 10
   bulletPool: {fileID: 0}
-  orbMiniSpeed: 0
+  orbMiniSpeed: 2
   missile: {fileID: 3154115654868491587, guid: 42c2a0ff8fe6c0947b570428d45f9587, type: 3}
   spawnLeft: {fileID: 0}
   spawnRight: {fileID: 0}
   Enemy: {fileID: 4545006086782266455, guid: 5a047e622af85d34d94a13660a9ed844, type: 3}
+  Enemy2: {fileID: 4545006086782266455, guid: 7d846e95cb111944faee6453b1378a3a, type: 3}
   mechLeft: {fileID: 0}
   mechMiddle: {fileID: 0}
   mechRight: {fileID: 0}
+  mechTop: {fileID: 0}
+  mechBottom: {fileID: 0}
   skyDrop: {fileID: 0}
+  skyDrop2: {fileID: 0}
   skyDropEmitter: {fileID: 0}
 --- !u!114 &9084881336624377264
 MonoBehaviour:
@@ -464,6 +469,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7419b0e44c7c1e41b2b228716191b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1827097391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910417616581038534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2632e26b7e54e3047bb573ba674c836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1130997404831973634
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +554,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: 4316403967313326553, guid: 3f5b4f2a219d3df4187ca8ea27d12437,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -588,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 10
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
@@ -684,7 +701,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -9115602500242290353, guid: 3a0dc70aa93e916438a13adc957ed324,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -735,7 +752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 10
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
@@ -831,7 +848,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -2850412476512446806, guid: 62b2bb643b3ff554aa3356230252267c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -882,7 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 10
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
@@ -978,7 +995,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: 4423666967981606201, guid: fc5fbdb0868373d4486934e848373ac1,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1029,7 +1046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 10
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
@@ -1305,7 +1322,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -2189029659247675978, guid: f41062bc52c1bc441a06dcb01cd2d932,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1356,7 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 10
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
