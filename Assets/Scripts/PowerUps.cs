@@ -7,6 +7,7 @@ public class PowerUps : MonoBehaviour
 {
     public GameObject rapidFireSFX;
     public GameObject normalFireSFX;
+    public GameObject multiFireSFX;
 
     public float powerUpTime = 0;
     public float multiFireTime = 0;
@@ -71,7 +72,8 @@ public class PowerUps : MonoBehaviour
             col.transform.parent.gameObject.GetComponent<BoxCollider2D>().enabled = false;            
             GetComponent<SpriteRenderer>().material.SetColor("_FlashColor", Color.white);
             GetComponent<flash>().flashDuration = 1f; 
-            GetComponent<flash>().Flash();           
+            GetComponent<flash>().Flash();   
+            Instantiate(multiFireSFX, transform.position, Quaternion.identity);        
             StartCoroutine(DefaultFire(col));            
         }
     }
