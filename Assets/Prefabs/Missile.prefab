@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 7222256567538037478, guid: c7f8bb105b893764b99197843aaf765c, type: 3}
   om: {fileID: 7222256567538037478, guid: 1699a237024ffc849b0dde9f81bbf075, type: 3}
+  arrow: {fileID: 7222256567538037478, guid: a6dd33823e216be4997cbd5a169a38b3, type: 3}
 --- !u!114 &2807683858955692849
 MonoBehaviour:
   m_ObjectHideFlags: 0

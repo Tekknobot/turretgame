@@ -13,9 +13,6 @@ public class Shooting : MonoBehaviour
     public float fireRate = 20f;
     private float lastfired;                
 
-    public bool canShoot = true;
-    public bool flipRot = true;
-
     public Animator animator;
 
     float horizontalMove = 0f;
@@ -93,19 +90,7 @@ public class Shooting : MonoBehaviour
             player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
             animator.SetBool("isShooting45", true);
             Shoot45();
-        }    
-        else if (Input.GetButton("Fire2") && horizontalMove == 0 && !player.GetComponent<CharacterController2D>().m_FacingRight) {
-            transform.rotation = Quaternion.Euler(0, 0, 45);
-            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
-            animator.SetBool("isShooting45", true);
-            Shoot45();
-        }
-        else if (Input.GetButton("Fire3") && horizontalMove == 0 && player.GetComponent<CharacterController2D>().m_FacingRight) {
-            transform.rotation = Quaternion.Euler(0, 0, 135);
-            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
-            animator.SetBool("isShooting45", true);
-            Shoot45();
-        }        
+        }         
         else {
             animator.SetBool("isShooting45", false);
             transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -118,6 +103,14 @@ public class Shooting : MonoBehaviour
         {
             lastfired = Time.time;
             Instantiate(projectile, firePoint.transform.position, transform.rotation);
+            if (player.GetComponent<PowerUps>().hasArrow == true && !player.GetComponent<CharacterController2D>().m_FacingRight) {                
+                Instantiate(projectile, firePoint.transform.position, Quaternion.Euler(0, 0, 190));
+                Instantiate(projectile, firePoint.transform.position, Quaternion.Euler(0, 0, 170));
+            }   
+            else if (player.GetComponent<PowerUps>().hasArrow == true && player.GetComponent<CharacterController2D>().m_FacingRight) {              
+                Instantiate(projectile, firePoint.transform.position, Quaternion.Euler(0, 0, 10));
+                Instantiate(projectile, firePoint.transform.position, Quaternion.Euler(0, 0, 350));
+            }                     
         }
     }
 
@@ -125,6 +118,10 @@ public class Shooting : MonoBehaviour
         if (Time.time - lastfired > 1 / fireRate) {
             lastfired = Time.time;
             Instantiate(projectile, firePointUp.transform.position, transform.rotation);
+            if (player.GetComponent<PowerUps>().hasArrow == true) {
+                Instantiate(projectile, firePointUp.transform.position, Quaternion.Euler(0, 0, 100));
+                Instantiate(projectile, firePointUp.transform.position, Quaternion.Euler(0, 0, 80));
+            }
         }
     }    
 
@@ -132,6 +129,14 @@ public class Shooting : MonoBehaviour
         if (Time.time - lastfired > 1 / fireRate) {
             lastfired = Time.time;
             Instantiate(projectile, firePoint45.transform.position, transform.rotation);
-        }
+            if (Input.GetButton("Fire2") && player.GetComponent<PowerUps>().hasArrow == true) {                
+                Instantiate(projectile, firePoint45.transform.position, Quaternion.Euler(0, 0, 55));
+                Instantiate(projectile, firePoint45.transform.position, Quaternion.Euler(0, 0, 35));
+            }  
+            else if (Input.GetButton("Fire3") && player.GetComponent<PowerUps>().hasArrow == true) {                
+                Instantiate(projectile, firePoint45.transform.position, Quaternion.Euler(0, 0, 145));
+                Instantiate(projectile, firePoint45.transform.position, Quaternion.Euler(0, 0, 125));
+            }                                                                
+        }            
     }       
 }
