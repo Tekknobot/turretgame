@@ -90,7 +90,19 @@ public class Shooting : MonoBehaviour
             player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
             animator.SetBool("isShooting45", true);
             Shoot45();
-        }         
+        } 
+        else if (Input.GetButton("Fire2") && horizontalMove == 0 && !player.GetComponent<CharacterController2D>().m_FacingRight) {
+            transform.rotation = Quaternion.Euler(0, 0, 45);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
+            animator.SetBool("isShooting45", true);
+            Shoot45();
+        }
+        else if (Input.GetButton("Fire3") && horizontalMove == 0 && player.GetComponent<CharacterController2D>().m_FacingRight) {
+            transform.rotation = Quaternion.Euler(0, 0, 135);
+            player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
+            animator.SetBool("isShooting45", true);
+            Shoot45();
+        }        
         else {
             animator.SetBool("isShooting45", false);
             transform.rotation = Quaternion.Euler(0, 0, 0);
