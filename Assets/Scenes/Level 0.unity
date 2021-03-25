@@ -435,6 +435,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clouds
       objectReference: {fileID: 0}
+    - target: {fileID: 8668799422606829625, guid: 831377f4fff69674c84f763e7526e165,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668799423383883267, guid: 831377f4fff69674c84f763e7526e165,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 831377f4fff69674c84f763e7526e165, type: 3}
 --- !u!1 &519420028
