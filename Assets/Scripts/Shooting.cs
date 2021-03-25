@@ -10,6 +10,8 @@ public class Shooting : MonoBehaviour
     public Transform firePoint45;
     public GameObject projectile;
 
+    public AudioClip shootSFX;
+
     public float fireRate = 20f;
     private float lastfired;                
 
@@ -20,7 +22,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -113,6 +115,9 @@ public class Shooting : MonoBehaviour
     void Shoot() {
         if (Time.time - lastfired > 1 / fireRate)
         {
+            GetComponent<AudioSource>().clip = shootSFX;
+            GetComponent<AudioSource>().Play();
+            
             lastfired = Time.time;
             Instantiate(projectile, firePoint.transform.position, transform.rotation);
             if (player.GetComponent<PowerUps>().hasArrow == true && !player.GetComponent<CharacterController2D>().m_FacingRight) {                
@@ -128,6 +133,9 @@ public class Shooting : MonoBehaviour
 
     void ShootUp() {
         if (Time.time - lastfired > 1 / fireRate) {
+            GetComponent<AudioSource>().clip = shootSFX;
+            GetComponent<AudioSource>().Play();
+
             lastfired = Time.time;
             Instantiate(projectile, firePointUp.transform.position, transform.rotation);
             if (player.GetComponent<PowerUps>().hasArrow == true) {
@@ -139,6 +147,9 @@ public class Shooting : MonoBehaviour
 
     void Shoot45() {
         if (Time.time - lastfired > 1 / fireRate) {
+            GetComponent<AudioSource>().clip = shootSFX;
+            GetComponent<AudioSource>().Play();
+                        
             lastfired = Time.time;
             Instantiate(projectile, firePoint45.transform.position, transform.rotation);
             if (Input.GetButton("Fire2") && player.GetComponent<PowerUps>().hasArrow == true) {                
