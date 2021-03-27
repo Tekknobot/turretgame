@@ -7,19 +7,20 @@ public class MoveRect : MonoBehaviour
     //Declare RectTransform in script
     RectTransform target;
     //The new position of your target
-    Vector3 newPos = new Vector3(0, 75.9f, 0);
-    Vector3 oldPos = new Vector3(0, 106.3f, 0);
+    public Vector3 newPos = new Vector3(0, 75.9f, 0);
+    public Vector3 oldPos = new Vector3(0, 106.3f, 0);
     //Reference value used for the Smoothdamp method
     private Vector3 buttonVelocity = Vector3.zero;
     //Smooth time
     public float smoothTime = 0.5f;
 
-    public bool hasTargetMoved = false;
+    public bool hasTargetMoved;
  
     void Start()
     {
         //Get the RectTransform component
         target = GetComponent<RectTransform>();
+        hasTargetMoved = true;
     }
     
     void Update()
@@ -29,11 +30,12 @@ public class MoveRect : MonoBehaviour
             target.localPosition = Vector3.SmoothDamp(target.localPosition, newPos, ref buttonVelocity, smoothTime);
             StartCoroutine(MoveRectPosition());
         }    
+        if (hasTargetMoved == true) {
+            target.localPosition = Vector3.SmoothDamp(target.localPosition, oldPos, ref buttonVelocity, smoothTime);
+        }
     }
 
     IEnumerator MoveRectPosition() {
-        yield return new WaitForSeconds(3);
-        target.localPosition = Vector3.SmoothDamp(target.localPosition, oldPos, ref buttonVelocity, smoothTime);
-        hasTargetMoved = true;
+        yield return new WaitUntil(() => hasTargetMoved == true);
     }
 }
