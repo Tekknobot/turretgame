@@ -6,7 +6,7 @@ public class MoveRect : MonoBehaviour
 {
     //Declare RectTransform in script
     RectTransform target;
-    //The new position of your button
+    //The new position of your target
     Vector3 newPos = new Vector3(0, 75.9f, 0);
     Vector3 oldPos = new Vector3(0, 106.3f, 0);
     //Reference value used for the Smoothdamp method
