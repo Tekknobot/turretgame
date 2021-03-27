@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class MoveRect : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Declare RectTransform in script
+    RectTransform target;
+    //The new position of your button
+    Vector3 newPos = new Vector3(0, 75.9f, 0);
+    Vector3 oldPos = new Vector3(0, 106.3f, 0);
+    //Reference value used for the Smoothdamp method
+    private Vector3 buttonVelocity = Vector3.zero;
+    //Smooth time
+    public float smoothTime = 0.5f;
+
+    public bool hasTargetMoved = false;
+ 
     void Start()
     {
-        
+        //Get the RectTransform component
+        target = GetComponent<RectTransform>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        //Update the localPosition towards the newPos
+        if (hasTargetMoved == false) {
+            target.localPosition = Vector3.SmoothDamp(target.localPosition, newPos, ref buttonVelocity, smoothTime);
+            StartCoroutine(MoveRectPosition());
+        }    
+    }
+
+    IEnumerator MoveRectPosition() {
+        yield return new WaitForSeconds(3);
+        target.localPosition = Vector3.SmoothDamp(target.localPosition, oldPos, ref buttonVelocity, smoothTime);
+        hasTargetMoved = true;
     }
 }

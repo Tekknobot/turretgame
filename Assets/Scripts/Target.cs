@@ -43,6 +43,10 @@ public class Target : MonoBehaviour
             if (currentHealth == maxHealth) {
                 hitPointsText.color = Color.white;
             }
+
+            if (currentHealth < 0) {
+                hitPointsText.text = 0 + "%";
+            }
         }               
     }
 

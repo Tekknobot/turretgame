@@ -3580,6 +3580,7 @@ GameObject:
   - component: {fileID: 501351852}
   - component: {fileID: 501351851}
   - component: {fileID: 501351849}
+  - component: {fileID: 501351850}
   m_Layer: 5
   m_Name: Danger
   m_TagString: Untagged
@@ -3603,7 +3604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 75.9}
+  m_AnchoredPosition: {x: 0, y: 106.3}
   m_SizeDelta: {x: 72, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501351849
@@ -3624,6 +3625,20 @@ MonoBehaviour:
   spritePerFrame: 30
   loop: 1
   destroyOnEnd: 0
+--- !u!114 &501351850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501351847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e840073e3db8d4fabe236db38b6757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothTime: 0.2
+  hasTargetMoved: 0
 --- !u!114 &501351851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5920,6 +5935,13 @@ MonoBehaviour:
   alpha: {fileID: 1827097377}
   mech: {fileID: 1051983301}
   lunatic: {fileID: 7940236295562540229}
+  songChanged0: 0
+  songChanged1: 0
+  songChanged2: 0
+  songChanged3: 0
+  songChanged4: 0
+  songChanged5: 0
+  DangerUI: {fileID: 501351847}
 --- !u!114 &862202427
 MonoBehaviour:
   m_ObjectHideFlags: 0

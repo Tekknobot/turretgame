@@ -16,12 +16,14 @@ public class TriggerMusic : MonoBehaviour
     public GameObject mech;
     public GameObject lunatic;
 
-    bool songChanged0 = false;
-    bool songChanged1 = false;
-    bool songChanged2 = false;
-    bool songChanged3 = false;
-    bool songChanged4 = false;
-    bool songChanged5 = false;
+    public bool songChanged0 = false;
+    public bool songChanged1 = false;
+    public bool songChanged2 = false;
+    public bool songChanged3 = false;
+    public bool songChanged4 = false;
+    public bool songChanged5 = false;
+
+    public GameObject DangerUI;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,7 @@ public class TriggerMusic : MonoBehaviour
         if (songChanged0 == false) {
             if (bomber.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song1);
+                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged0 = true;
             }
         }
@@ -42,6 +45,7 @@ public class TriggerMusic : MonoBehaviour
         if (songChanged1 == false) {
             if (pharaoh.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song2);
+                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged1 = true;
             }
         }
@@ -49,6 +53,7 @@ public class TriggerMusic : MonoBehaviour
         if (songChanged2 == false) {
             if (alpha.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song3);
+                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged2 = true;
             }
         }
@@ -56,6 +61,7 @@ public class TriggerMusic : MonoBehaviour
         if (songChanged3 == false) {
             if (mech.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song4);
+                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged3 = true;
             }
         }  
@@ -63,6 +69,7 @@ public class TriggerMusic : MonoBehaviour
         if (songChanged4 == false) {
             if (lunatic.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song5);
+                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged4 = true;
             }
         }                    
