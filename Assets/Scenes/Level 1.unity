@@ -1440,7 +1440,7 @@ GameObject:
   - component: {fileID: 210607320}
   - component: {fileID: 210607322}
   m_Layer: 0
-  m_Name: Aircraft Commander
+  m_Name: Pilot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1462,10 +1462,10 @@ MonoBehaviour:
     name: Pilot
     sentences:
     - You're our last hope to win this war.
-    - A single turret on an aircraft carrier.
+    - The last turret on our last aircraft carrier.
     - You must endure.
     - You can't give in.
-    - Get ready.
+    - Get ready!
 --- !u!4 &210607321
 Transform:
   m_ObjectHideFlags: 0
@@ -1495,6 +1495,10 @@ MonoBehaviour:
   dialogueManager: {fileID: 756985725}
   dialogueBox: {fileID: 2944232994309756711}
   firstBoss: {fileID: 985421272}
+  secondBoss: {fileID: 1119619483}
+  thirdBoss: {fileID: 1827097377}
+  fourthBoss: {fileID: 1051983301}
+  fifthBoss: {fileID: 7940236295562540229}
 --- !u!1 &211212644
 GameObject:
   m_ObjectHideFlags: 0
@@ -5517,7 +5521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39, y: 0.3}
+  m_AnchoredPosition: {x: -39, y: -0.02}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792149568
@@ -13783,8 +13787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 160, y: 121.4}
-  m_SizeDelta: {x: 114.73956, y: 37.56996}
+  m_AnchoredPosition: {x: 160, y: 128.33}
+  m_SizeDelta: {x: 114.73956, y: 20.041225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2944232994309756709
 MonoBehaviour:
@@ -13828,6 +13832,7 @@ GameObject:
   - component: {fileID: 2944232994309756709}
   - component: {fileID: 2944232994309756715}
   - component: {fileID: 2944232994309756712}
+  - component: {fileID: 2944232994309756713}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -13851,6 +13856,21 @@ MonoBehaviour:
   oldPos: {x: 0, y: 121.4, z: 0}
   smoothTime: 0.2
   hasTargetMoved: 0
+--- !u!114 &2944232994309756713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2944232994309756711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!222 &2944232994309756714
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13920,8 +13940,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.51, y: -3.2257}
-  m_SizeDelta: {x: 75.32089, y: 24.284094}
+  m_AnchoredPosition: {x: 18.51, y: 0.18}
+  m_SizeDelta: {x: 75.32089, y: 17.467272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2944232994328692007
 MonoBehaviour:
@@ -14230,6 +14250,11 @@ PrefabInstance:
       propertyPath: nextBoss
       value: 
       objectReference: {fileID: 1051983301}
+    - target: {fileID: 1457406560578991710, guid: e55a127b94e3b1d45b6e636601c21f84,
+        type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2056671875415821610, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: hitPointsText
@@ -14344,6 +14369,11 @@ PrefabInstance:
       propertyPath: nextBoss
       value: 
       objectReference: {fileID: 1119619483}
+    - target: {fileID: 5705093938014163623, guid: 5173add66582b7441986cb98063519b2,
+        type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5705093938014163627, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
       propertyPath: target
@@ -14495,7 +14525,7 @@ PrefabInstance:
     - target: {fileID: 7145566463773037205, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
       propertyPath: maxHealth
-      value: 150
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7145566463773037207, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
@@ -14602,6 +14632,11 @@ PrefabInstance:
       propertyPath: hitPointsText
       value: 
       objectReference: {fileID: 816816408}
+    - target: {fileID: 2041130924503338317, guid: a1c2774df705c2f4ebc147080cd1f9f1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 2041130924503338319, guid: a1c2774df705c2f4ebc147080cd1f9f1,
         type: 3}
       propertyPath: m_LocalPosition.x
