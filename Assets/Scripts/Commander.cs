@@ -80,7 +80,21 @@ public class Commander : MonoBehaviour
         dialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
         yield return new WaitForSeconds(3);        
         dialogueManager.GetComponent<DialogueManager>().EndDialogue();        
-        fourthBoss.SetActive(true);              
-             
+        fourthBoss.SetActive(true);   
+        yield return new WaitUntil(()=> !fourthBoss);
+        GetComponent<DialogueTrigger>().dialogue.sentences[0] = "This war ain't over yet.";
+        GetComponent<DialogueTrigger>().dialogue.sentences[1] = "Another mech on it's way.";
+        GetComponent<DialogueTrigger>().dialogue.sentences[2] = "Keep doing what you're doing.";
+        GetComponent<DialogueTrigger>().dialogue.sentences[3] = "You can do it!";        
+        GetComponent<DialogueTrigger>().TriggerDialogue();
+        yield return new WaitForSeconds(3);
+        dialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
+        yield return new WaitForSeconds(3);
+        dialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
+        yield return new WaitForSeconds(3);        
+        dialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
+        yield return new WaitForSeconds(3);        
+        dialogueManager.GetComponent<DialogueManager>().EndDialogue();        
+        fifthBoss.SetActive(true);                           
     }
 }
