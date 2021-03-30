@@ -23,7 +23,7 @@ public class LootDrop : MonoBehaviour
         }        
     }
 
-    const float m_healthChance = 0.10f / 10f;             // Set odds here - e.g. 1 in 10 chance   
-    const float m_omChance = 0.20f / 10f; 
+    const float m_healthChance = 0.05f / 10f;             // Set odds here - e.g. 1 in 10 chance   
+    const float m_omChance = 0.10f / 10f; 
     const float m_arrowChance = 0.10f / 10f; 
 }
