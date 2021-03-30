@@ -43,7 +43,7 @@ public class Commander : MonoBehaviour
         yield return new WaitUntil(()=> !firstBoss);
         GetComponent<DialogueTrigger>().dialogue.sentences[0] = "Enemy is down!";
         GetComponent<DialogueTrigger>().dialogue.sentences[1] = "Great work! but there's more on the way!";
-        GetComponent<DialogueTrigger>().dialogue.sentences[2] = "Get ready!";
+        GetComponent<DialogueTrigger>().dialogue.sentences[2] = "Let's change the beat!";
         GetComponent<DialogueTrigger>().TriggerDialogue();
         yield return new WaitForSeconds(3);
         dialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
