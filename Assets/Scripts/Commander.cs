@@ -12,6 +12,7 @@ public class Commander : MonoBehaviour
     public GameObject thirdBoss;
     public GameObject fourthBoss;
     public GameObject fifthBoss;
+    public GameObject sixthBoss;
 
     // Start is called before the first frame update
     void Start()
@@ -95,6 +96,21 @@ public class Commander : MonoBehaviour
         dialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
         yield return new WaitForSeconds(3);        
         dialogueManager.GetComponent<DialogueManager>().EndDialogue();        
-        fifthBoss.SetActive(true);                           
+        fifthBoss.SetActive(true);        
+        yield return new WaitUntil(()=> !fifthBoss);
+        GetComponent<DialogueTrigger>().dialogue.sentences[0] = "You're heating up.";
+        GetComponent<DialogueTrigger>().dialogue.sentences[1] = "We've detected major movement coming from below.";
+        GetComponent<DialogueTrigger>().dialogue.sentences[2] = "It's probably another mech.";
+        GetComponent<DialogueTrigger>().dialogue.sentences[3] = "Yep! It's another mech.";        
+        GetComponent<DialogueTrigger>().TriggerDialogue();
+        yield return new WaitForSeconds(3);
+        dialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
+        yield return new WaitForSeconds(3);
+        dialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
+        yield return new WaitForSeconds(3);        
+        dialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
+        yield return new WaitForSeconds(3);        
+        dialogueManager.GetComponent<DialogueManager>().EndDialogue();        
+        sixthBoss.SetActive(true);                             
     }
 }

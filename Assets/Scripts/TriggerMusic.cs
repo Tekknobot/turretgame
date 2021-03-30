@@ -9,6 +9,7 @@ public class TriggerMusic : MonoBehaviour
     public AudioClip song3;
     public AudioClip song4;
     public AudioClip song5;
+    public AudioClip song6;
     public AudioClip surfSFX;
 
     public GameObject bomber;
@@ -16,6 +17,7 @@ public class TriggerMusic : MonoBehaviour
     public GameObject alpha;
     public GameObject mech;
     public GameObject lunatic;
+    public GameObject mechZilla;    
 
     public bool surfIsPlaying = false;
     public bool songChanged0 = false;
@@ -23,7 +25,7 @@ public class TriggerMusic : MonoBehaviour
     public bool songChanged2 = false;
     public bool songChanged3 = false;
     public bool songChanged4 = false;
-    public bool songChanged5 = false;
+    public bool songChanged5 = false;    
 
     public GameObject DangerUI;
 
@@ -84,7 +86,16 @@ public class TriggerMusic : MonoBehaviour
                 songChanged4 = true;
                 StartCoroutine(WaitforDangerUI());
             }
-        }                    
+        }    
+
+        if (songChanged5 == false) {
+            if (mechZilla.activeSelf) {
+                GetComponent<CrossFadeMusicManager>().ChangeSong(song6);
+                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
+                songChanged5 = true;
+                StartCoroutine(WaitforDangerUI());
+            }
+        }  
     }
 
     IEnumerator WaitforDangerUI() {

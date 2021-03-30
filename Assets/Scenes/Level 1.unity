@@ -1499,6 +1499,7 @@ MonoBehaviour:
   thirdBoss: {fileID: 1827097377}
   fourthBoss: {fileID: 1051983301}
   fifthBoss: {fileID: 7940236295562540229}
+  sixthBoss: {fileID: 6154505398743560112}
 --- !u!1 &211212644
 GameObject:
   m_ObjectHideFlags: 0
@@ -6070,12 +6071,14 @@ MonoBehaviour:
   song3: {fileID: 8300000, guid: b9886198b11cd3d4d8a49ff863994a05, type: 3}
   song4: {fileID: 8300000, guid: d5e30cd5c2a729f47916ad13169eab4b, type: 3}
   song5: {fileID: 8300000, guid: 69eafd544720ef147a17aa6711cd8213, type: 3}
+  song6: {fileID: 8300000, guid: 0d7595556aae8ed41a20020027c35bba, type: 3}
   surfSFX: {fileID: 8300000, guid: ff1e9cf68d2a2db4f9fd30e07ba032fb, type: 3}
   bomber: {fileID: 985421272}
   pharaoh: {fileID: 1119619483}
   alpha: {fileID: 1827097377}
   mech: {fileID: 1051983301}
   lunatic: {fileID: 7940236295562540229}
+  mechZilla: {fileID: 6154505398743560112}
   surfIsPlaying: 0
   songChanged0: 0
   songChanged1: 0
@@ -12834,7 +12837,7 @@ PrefabInstance:
     - target: {fileID: 8444152783872354867, guid: d0fde9e199db7c547930d01afad36e6d,
         type: 3}
       propertyPath: maxHealth
-      value: 400
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0fde9e199db7c547930d01afad36e6d, type: 3}
@@ -14188,7 +14191,7 @@ PrefabInstance:
     - target: {fileID: 1457406560578991710, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2056671875415821610, guid: e55a127b94e3b1d45b6e636601c21f84,
         type: 3}
@@ -14307,7 +14310,7 @@ PrefabInstance:
     - target: {fileID: 5705093938014163623, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
       propertyPath: maxHealth
-      value: 400
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5705093938014163627, guid: 5173add66582b7441986cb98063519b2,
         type: 3}
@@ -14774,7 +14777,7 @@ PrefabInstance:
     - target: {fileID: 7145566463773037205, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
       propertyPath: maxHealth
-      value: 400
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7145566463773037207, guid: 7c5ca8a0acb819d4ca3ac8e6de0a58d4,
         type: 3}
@@ -14884,7 +14887,7 @@ PrefabInstance:
     - target: {fileID: 2041130924503338317, guid: a1c2774df705c2f4ebc147080cd1f9f1,
         type: 3}
       propertyPath: maxHealth
-      value: 400
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2041130924503338319, guid: a1c2774df705c2f4ebc147080cd1f9f1,
         type: 3}
