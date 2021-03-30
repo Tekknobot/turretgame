@@ -42,7 +42,8 @@ public class FireBullets : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GetComponent<Transform>().tag == "Boss" && this.name != "Alpha" && this.name != "Mech" && this.name != "Lunatic") {
+        if (GetComponent<Transform>().tag == "Boss" && this.name != "Alpha" && this.name != "Mech" 
+            && this.name != "Lunatic" && this.name != "MechZilla") {
             StartCoroutine(DropBombs());
         }
 
@@ -60,7 +61,11 @@ public class FireBullets : MonoBehaviour
 
         if (this.name == "Lunatic" && GetComponent<Transform>().tag == "Boss") {
             StartCoroutine(DropBombsLunatic());
-        }                   
+        }   
+
+        if (this.name == "MechZilla" && GetComponent<Transform>().tag == "Boss") {
+            StartCoroutine(DropBombsMechZilla());
+        }                         
     }
 
     void Update() {
@@ -226,5 +231,26 @@ public class FireBullets : MonoBehaviour
         GetComponent<SmoothFollow>().dampTime = 0.5f;
         GetComponent<SmoothFollow>().target = mechLeft;                      
         StartCoroutine(DropBombsLunatic());
-    }            
+    }   
+
+    IEnumerator DropBombsMechZilla() {
+        CancelInvoke("Fire");
+        yield return new WaitForSeconds(3);
+        InvokeRepeating("Fire", 0f, repeatFire);  
+        yield return new WaitForSeconds(10); 
+        repeatFire = 1;
+        GetComponent<SmoothFollow>().target = mechRight;
+        yield return new WaitForSeconds(10);   
+        GetComponent<SmoothFollow>().target = mechMiddle;            
+        Instantiate(skyDrop, skyDropEmitter.transform.position, Quaternion.identity);
+        Instantiate(skyDrop2, skyDropEmitter.transform.position, Quaternion.identity); 
+        yield return new WaitForSeconds(10);
+        GameObject.FindGameObjectWithTag("SkyDrop").GetComponent<SkyDrop>().CancelInvoke("StartSkyDrop");      
+        GameObject[] skyDrops = GameObject.FindGameObjectsWithTag("SkyDrop");
+        foreach(GameObject skyDropObject in skyDrops)
+        GameObject.Destroy(skyDropObject); 
+        GetComponent<SmoothFollow>().target = mechLeft;   
+        yield return new WaitForSeconds(10);                  
+        StartCoroutine(DropBombsMechZilla());
+    }              
 }
