@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: 72b184dd6358c7745a8d14956a189ebe
+guid: cccf191059c6f094da62e4a5f2d6c890
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1019491336629384071
-    second: mechzilla 0
+      213: -5660799306964213166
+    second: mechzilla_crit_0 0
   - first:
-      213: -5029103450535663291
-    second: mechzilla 1
+      213: -8547624207582933746
+    second: mechzilla_crit_0 1
   - first:
-      213: 4075678162817437002
-    second: mechzilla 2
+      213: 7466429851497992155
+    second: mechzilla_crit_0 2
   - first:
-      213: 1313812575246567478
-    second: mechzilla 3
+      213: 3338504784049102550
+    second: mechzilla_crit_0 3
   - first:
-      213: -5590826723696744096
-    second: mechzilla 4
+      213: 1957515052341741570
+    second: mechzilla_crit_0 4
   - first:
-      213: -7243255857847367925
-    second: mechzilla 5
+      213: 2915434298526168184
+    second: mechzilla_crit_0 5
   - first:
-      213: -7708301460221555871
-    second: mechzilla 6
+      213: 8952241272136758954
+    second: mechzilla_crit_0 6
   - first:
-      213: 2767601168117961879
-    second: mechzilla 7
+      213: 5868542282043859905
+    second: mechzilla_crit_0 7
   - first:
-      213: 4383626467350437393
-    second: mechzilla 8
+      213: 2712628432736521570
+    second: mechzilla_crit_0 8
   - first:
-      213: 2355260319988893758
-    second: mechzilla 9
+      213: -8416019043912531502
+    second: mechzilla_crit_0 9
   - first:
-      213: -3878445225709798364
-    second: mechzilla 10
+      213: -3128034853251720732
+    second: mechzilla_crit_0 10
   - first:
-      213: 7760122827375372141
-    second: mechzilla 11
+      213: -2891826781050510083
+    second: mechzilla_crit_0 11
   - first:
-      213: 6912023734977353402
-    second: mechzilla 12
+      213: -100933215581586942
+    second: mechzilla_crit_0 12
   - first:
-      213: -1158997652095077510
-    second: mechzilla 13
+      213: 7729612644013863310
+    second: mechzilla_crit_0 13
   - first:
-      213: -9184198477618720728
-    second: mechzilla 14
+      213: -5738166999489121166
+    second: mechzilla_crit_0 14
   - first:
-      213: 1675287623704648710
-    second: mechzilla 15
+      213: -9135653421811141242
+    second: mechzilla_crit_0 15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mechzilla 0
+      name: mechzilla_crit_0 0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97c0e94e70a0ad1f0800000000000000
-      internalID: -1019491336629384071
+      spriteID: 252ee93c50dc071b0800000000000000
+      internalID: -5660799306964213166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 1
+      name: mechzilla_crit_0 1
       rect:
         serializedVersion: 2
         x: 200
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 549612c9e09053ab0800000000000000
-      internalID: -5029103450535663291
+      spriteID: e0d4d79021db06980800000000000000
+      internalID: -8547624207582933746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 2
+      name: mechzilla_crit_0 2
       rect:
         serializedVersion: 2
         x: 400
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4dcc89f1b7bf8830800000000000000
-      internalID: 4075678162817437002
+      spriteID: bdf09ee14661e9760800000000000000
+      internalID: 7466429851497992155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 3
+      name: mechzilla_crit_0 3
       rect:
         serializedVersion: 2
         x: 600
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 638430983999b3210800000000000000
-      internalID: 1313812575246567478
+      spriteID: 6de5036b960c45e20800000000000000
+      internalID: 3338504784049102550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 4
+      name: mechzilla_crit_0 4
       rect:
         serializedVersion: 2
         x: 0
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0696b4d57b46962b0800000000000000
-      internalID: -5590826723696744096
+      spriteID: 2084f49919d7a2b10800000000000000
+      internalID: 1957515052341741570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 5
+      name: mechzilla_crit_0 5
       rect:
         serializedVersion: 2
         x: 200
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b078db77c29ca7b90800000000000000
-      internalID: -7243255857847367925
+      spriteID: 87474a14c04b57820800000000000000
+      internalID: 2915434298526168184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 6
+      name: mechzilla_crit_0 6
       rect:
         serializedVersion: 2
         x: 400
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16b8ed989ac960590800000000000000
-      internalID: -7708301460221555871
+      spriteID: aa67d498100cc3c70800000000000000
+      internalID: 8952241272136758954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 7
+      name: mechzilla_crit_0 7
       rect:
         serializedVersion: 2
         x: 600
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79490a9599e786620800000000000000
-      internalID: 2767601168117961879
+      spriteID: 1c3a596dc10417150800000000000000
+      internalID: 5868542282043859905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 8
+      name: mechzilla_crit_0 8
       rect:
         serializedVersion: 2
         x: 0
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11e5c6eeb05c5dc30800000000000000
-      internalID: 4383626467350437393
+      spriteID: 26d82ecff2135a520800000000000000
+      internalID: 2712628432736521570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 9
+      name: mechzilla_crit_0 9
       rect:
         serializedVersion: 2
         x: 200
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e38c28648c09fa020800000000000000
-      internalID: 2355260319988893758
+      spriteID: 2d1cba0054b443b80800000000000000
+      internalID: -8416019043912531502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 10
+      name: mechzilla_crit_0 10
       rect:
         serializedVersion: 2
         x: 400
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42cf1c8bd9efc2ac0800000000000000
-      internalID: -3878445225709798364
+      spriteID: 4e9d3eebfdcf694d0800000000000000
+      internalID: -3128034853251720732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 11
+      name: mechzilla_crit_0 11
       rect:
         serializedVersion: 2
         x: 600
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d67eb1bb89e71bb60800000000000000
-      internalID: 7760122827375372141
+      spriteID: df4e58b3dda2ed7d0800000000000000
+      internalID: -2891826781050510083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 12
+      name: mechzilla_crit_0 12
       rect:
         serializedVersion: 2
         x: 0
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab6d46a27f07cef50800000000000000
-      internalID: 6912023734977353402
+      spriteID: 20ab83376c9699ef0800000000000000
+      internalID: -100933215581586942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 13
+      name: mechzilla_crit_0 13
       rect:
         serializedVersion: 2
         x: 200
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a737c5ba6c96aefe0800000000000000
-      internalID: -1158997652095077510
+      spriteID: e8170d91fb9154b60800000000000000
+      internalID: 7729612644013863310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 14
+      name: mechzilla_crit_0 14
       rect:
         serializedVersion: 2
         x: 400
@@ -431,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8205ad2052c2b8080800000000000000
-      internalID: -9184198477618720728
+      spriteID: 274f49d148fed50b0800000000000000
+      internalID: -5738166999489121166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mechzilla 15
+      name: mechzilla_crit_0 15
       rect:
         serializedVersion: 2
         x: 600
@@ -452,8 +452,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60c168bb731df3710800000000000000
-      internalID: 1675287623704648710
+      spriteID: 6857dd99d93a73180800000000000000
+      internalID: -9135653421811141242
       vertices: []
       indices: 
       edges: []
