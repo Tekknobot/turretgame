@@ -235,10 +235,9 @@ public class FireBullets : MonoBehaviour
 
     IEnumerator DropBombsMechZilla() {
         CancelInvoke("Fire");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(8);
         InvokeRepeating("Fire", 0f, repeatFire);  
         yield return new WaitForSeconds(10); 
-        repeatFire = 1;
         GetComponent<SmoothFollow>().target = mechRight;
         yield return new WaitForSeconds(10);   
         GetComponent<SmoothFollow>().target = mechMiddle;            

@@ -51,7 +51,7 @@ public class PowerUps : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col) {   
         if(col.tag == "Om") {
-            powerUpTime += 8;
+            powerUpTime += 16;
             hasPowerup = true;
             col.transform.parent.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -65,7 +65,7 @@ public class PowerUps : MonoBehaviour
         }  
 
         if(col.tag == "ArrowHead") {
-            multiFireTime += 8;
+            multiFireTime += 16;
             hasArrow = true;
             col.transform.parent.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
