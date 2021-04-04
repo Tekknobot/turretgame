@@ -235,15 +235,20 @@ public class FireBullets : MonoBehaviour
 
     IEnumerator DropBombsMechZilla() {
         CancelInvoke("Fire");
+        CancelInvoke("Missile");
         yield return new WaitForSeconds(8);
         InvokeRepeating("Fire", 0f, repeatFire);  
-        yield return new WaitForSeconds(10); 
+        InvokeRepeating("Missile", 0f, repeatFire);
+        yield return new WaitForSeconds(10);
+        CancelInvoke("Missile"); 
         GetComponent<SmoothFollow>().target = mechRight;
         yield return new WaitForSeconds(10);   
+        InvokeRepeating("Missile", 0f, repeatFire);
         GetComponent<SmoothFollow>().target = mechMiddle;            
         Instantiate(skyDrop, skyDropEmitter.transform.position, Quaternion.identity);
         Instantiate(skyDrop2, skyDropEmitter.transform.position, Quaternion.identity); 
         yield return new WaitForSeconds(10);
+        CancelInvoke("Missile");
         GameObject.FindGameObjectWithTag("SkyDrop").GetComponent<SkyDrop>().CancelInvoke("StartSkyDrop");      
         GameObject[] skyDrops = GameObject.FindGameObjectsWithTag("SkyDrop");
         foreach(GameObject skyDropObject in skyDrops)

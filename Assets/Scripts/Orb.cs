@@ -22,9 +22,12 @@ public class Orb : MonoBehaviour
 			player.TakeDamagePlayer(damage);
 		}      
         GameObject newObject = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;  // instatiate the object
-        newObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        GetComponent<LootDrop>().LootChance();   
+        newObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);   
         Destroy(gameObject);
+
+        if (col.tag == "Bullet") {
+            GetComponent<LootDrop>().LootChance();
+        }
     }
 
     void OnBecameInvisible() {

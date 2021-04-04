@@ -1445,7 +1445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &210607320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5341,7 +5341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &756985726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14102,6 +14102,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MechZilla
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683039593634401261, guid: a074ede3225705f469301d0f14b29a16,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7683039593634401272, guid: a074ede3225705f469301d0f14b29a16,
         type: 3}

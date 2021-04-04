@@ -86,6 +86,7 @@ public class Target : MonoBehaviour
     void Death()
     {       
         Instantiate(explosionPrefab, explosionEmitter.transform.position, Quaternion.identity);
+        GetComponent<FireBullets>().CancelInvoke();
         Destroy(gameObject);            
     }
 
