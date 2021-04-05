@@ -86,7 +86,7 @@ public class Target : MonoBehaviour
     void Death()
     {       
         Instantiate(explosionPrefab, explosionEmitter.transform.position, Quaternion.identity);
-        GetComponent<FireBullets>().CancelInvoke();
+        GameObject.FindGameObjectWithTag("SkyDrop").GetComponent<SkyDrop>().CancelInvoke("StartSkyDrop");
         Destroy(gameObject);            
     }
 
