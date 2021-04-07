@@ -17,6 +17,10 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.right * speed;
     }
 
+    void Update() {
+        SumScore.SaveHighScore();
+    }
+
     void OnTriggerEnter2D(Collider2D col) {
         if (col.tag == "Boss" || col.tag == "Crit") {
             Target enemy = col.GetComponent<Target>();
@@ -24,6 +28,7 @@ public class Bullet : MonoBehaviour
             {
                 cam.GetComponent<CameraShake>().shakecamera();
                 enemy.TakeDamage(damage);
+                SumScore.Add(5);
             }
         }     
 
@@ -33,8 +38,14 @@ public class Bullet : MonoBehaviour
             {
                 cam.GetComponent<CameraShake>().shakecamera();
                 enemy.TakeDamage(damage);
+                SumScore.Add(5);
             }
-        }              
+        } 
+
+        if (col.tag == "EnemyBullet") {
+            SumScore.Add(1);
+        }       
+
         Destroy(gameObject);
     }
 

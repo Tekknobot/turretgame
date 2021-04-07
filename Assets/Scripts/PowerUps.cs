@@ -36,7 +36,7 @@ public class PowerUps : MonoBehaviour
                 hasPowerup = false;
             }
         }
-        omStatusText.text = Mathf.Round((powerUpTime)) + " rapid fire";     
+        omStatusText.text = Mathf.Round((powerUpTime)) + " rapid";     
 
         if(hasArrow) {
             multiFireTime -= Time.deltaTime;
@@ -46,7 +46,7 @@ public class PowerUps : MonoBehaviour
                 hasArrow = false;
             }
         }
-        arrowStatusText.text = Mathf.Round((multiFireTime)) + " multi fire";             
+        arrowStatusText.text = Mathf.Round((multiFireTime)) + " multi";             
     }
 
     void OnTriggerEnter2D(Collider2D col) {   
