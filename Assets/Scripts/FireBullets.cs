@@ -39,6 +39,8 @@ public class FireBullets : MonoBehaviour
     public GameObject skyDrop2;
     public GameObject skyDropEmitter;
 
+    public GameObject bulletEmitter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,8 +86,14 @@ public class FireBullets : MonoBehaviour
             Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
             GameObject bul = BulletPool.bulletPoolInstance.GetBullet();
-                bul.transform.position = transform.position;
-                bul.transform.rotation = transform.rotation;
+                if (bulletEmitter == null) {
+                    bul.transform.position = transform.position;
+                    bul.transform.rotation = transform.rotation;                
+                }
+                else {
+                    bul.transform.position = bulletEmitter.transform.position;
+                    bul.transform.rotation = bulletEmitter.transform.rotation;
+                }
                 bul.SetActive(true);
                 bul.GetComponent<Orb_mini>().SetMoveDirection(bulDir);
 

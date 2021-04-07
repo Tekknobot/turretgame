@@ -20,7 +20,12 @@ public class Mech : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.spriteRenderer.flipX = target.transform.position.x < this.transform.position.x;
+        if (target.transform.position.x < this.transform.position.x) {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }   
 
     void OnTriggerEnter2D(Collider2D col) {   
