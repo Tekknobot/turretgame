@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 800
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
@@ -485,6 +485,7 @@ MonoBehaviour:
   skyDrop2: {fileID: 7348094575995282566, guid: 2c36a07a4ce6c2c44b70b9a37b8c38ee,
     type: 3}
   skyDropEmitter: {fileID: 0}
+  bulletEmitter: {fileID: 0}
 --- !u!50 &7683039593634401274
 Rigidbody2D:
   serializedVersion: 4

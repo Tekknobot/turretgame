@@ -99,9 +99,12 @@ MonoBehaviour:
   mechLeft: {fileID: 0}
   mechMiddle: {fileID: 0}
   mechRight: {fileID: 0}
+  mechTop: {fileID: 0}
+  mechBottom: {fileID: 0}
   skyDrop: {fileID: 0}
   skyDrop2: {fileID: 0}
   skyDropEmitter: {fileID: 0}
+  bulletEmitter: {fileID: 0}
 --- !u!114 &4545006086782266434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +158,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3534482361468711077, guid: 685978a531ea3d44fa7115b6317e550a,
+  m_Sprite: {fileID: -9047496754040368172, guid: 40a273b51ad19794895f5f01e43bd8d2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -210,7 +213,7 @@ Animator:
   m_GameObject: {fileID: 4545006086782266455}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3b4293183198f22489df07757aafe0e4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3ee6422351ffc2040897195fc803ad9f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -236,7 +239,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 3.9375, y: 2}
     newSize: {x: 13, y: 7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

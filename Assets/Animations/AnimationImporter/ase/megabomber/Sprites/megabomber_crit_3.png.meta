@@ -1,0 +1,476 @@
+fileFormatVersion: 2
+guid: 166b054292f30164ab9d3dd6a6b426f6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 773485685004283713
+    second: megabomber_crit_3 0
+  - first:
+      213: 4565053184661768778
+    second: megabomber_crit_3 1
+  - first:
+      213: 807354330750115215
+    second: megabomber_crit_3 2
+  - first:
+      213: 8888676850785228005
+    second: megabomber_crit_3 3
+  - first:
+      213: 8438670122777533413
+    second: megabomber_crit_3 4
+  - first:
+      213: 8623546362749613003
+    second: megabomber_crit_3 5
+  - first:
+      213: 5619418079429205148
+    second: megabomber_crit_3 6
+  - first:
+      213: -5289071856627245205
+    second: megabomber_crit_3 7
+  - first:
+      213: 7735405550395302774
+    second: megabomber_crit_3 8
+  - first:
+      213: -8374463112639946301
+    second: megabomber_crit_3 9
+  - first:
+      213: 8457668574360220298
+    second: megabomber_crit_3 10
+  - first:
+      213: 6230389948201724258
+    second: megabomber_crit_3 11
+  - first:
+      213: 345586852083540965
+    second: megabomber_crit_3 12
+  - first:
+      213: -5541904523940383991
+    second: megabomber_crit_3 13
+  - first:
+      213: -568331193917260608
+    second: megabomber_crit_3 14
+  - first:
+      213: -3624644398926732689
+    second: megabomber_crit_3 15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 852
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: megabomber_crit_3 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14fa785e129fbba00800000000000000
+      internalID: 773485685004283713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 160
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ac78c4fa35a5f30800000000000000
+      internalID: 4565053184661768778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 2
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 160
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ddb3c7c7c443b00800000000000000
+      internalID: 807354330750115215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 3
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 160
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e49a46608cea5b70800000000000000
+      internalID: 8888676850785228005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 4
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 160
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb5bd444cd2c1570800000000000000
+      internalID: 8438670122777533413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc37dc73abdfca770800000000000000
+      internalID: 8623546362749613003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 6
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 80
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c19c468fe2cfd40800000000000000
+      internalID: 5619418079429205148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 7
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 80
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f973a4b217996b0800000000000000
+      internalID: -5289071856627245205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 8
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 80
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673a5e83d5ea95b60800000000000000
+      internalID: 7735405550395302774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1eb7a3b2ee7cb80800000000000000
+      internalID: -8374463112639946301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 10
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a82b9baf1ccaf5570800000000000000
+      internalID: 8457668574360220298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 11
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 0
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2696abad5aac67650800000000000000
+      internalID: 6230389948201724258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 12
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e32c753965cbc400800000000000000
+      internalID: 345586852083540965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 13
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 160
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 903376f92333713b0800000000000000
+      internalID: -5541904523940383991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 14
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 160
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ccb9cf4ac1ec18f0800000000000000
+      internalID: -568331193917260608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megabomber_crit_3 15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 213
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62ecd49f1da2bdc0800000000000000
+      internalID: -3624644398926732689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
