@@ -64,8 +64,6 @@ public class PowerUps : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col) {   
-        varTime = 0;
-
         if(col.tag == "Om") {
             powerUpTime += 16;
             hasPowerup = true;
@@ -91,6 +89,10 @@ public class PowerUps : MonoBehaviour
             GetComponent<flash>().Flash();   
             Instantiate(multiFireSFX, transform.position, Quaternion.identity);        
             StartCoroutine(DefaultFire(col));            
+        }
+
+        if (col.tag == "EnemyBullet") {
+            varTime = 0;
         }
     }
 
