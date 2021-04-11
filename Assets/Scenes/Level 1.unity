@@ -14358,6 +14358,15 @@ PrefabInstance:
       propertyPath: healthEmitter
       value: 
       objectReference: {fileID: 1597992952}
+    - target: {fileID: 539318375, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 7222256567538037478, guid: c7f8bb105b893764b99197843aaf765c,
+        type: 3}
+    - target: {fileID: 539318375, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
+      propertyPath: itemEmitter
+      value: 
+      objectReference: {fileID: 1597992952}
     - target: {fileID: 5185620909583790748, guid: 5de4e3ec0d8520c4ebb80c2895157921,
         type: 3}
       propertyPath: hitPointsText
