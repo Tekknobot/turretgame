@@ -85,13 +85,7 @@ public class Target : MonoBehaviour
 
     void Death()
     {       
-        Instantiate(explosionPrefab, explosionEmitter.transform.position, Quaternion.identity);
-        if (gameObject.name == "MechZilla") {
-            GameObject.FindGameObjectWithTag("SkyDrop").GetComponent<SkyDrop>().CancelInvoke("StartSkyDrop");
-            GameObject[] skyDrops = GameObject.FindGameObjectsWithTag("SkyDrop");
-            foreach(GameObject skyDropObject in skyDrops)
-            GameObject.Destroy(skyDropObject);   
-        }     
+        Instantiate(explosionPrefab, explosionEmitter.transform.position, Quaternion.identity);  
         Destroy(gameObject);            
     }
 
@@ -114,7 +108,15 @@ public class Target : MonoBehaviour
             Instantiate(explosionPrefab, spawnPos, Quaternion.identity);
             GetComponent<DaShake>().shaketrue = true;
             yield return new WaitForSeconds(0.2f);
-        }    
+        }   
+
+        if (gameObject.name == "MechZilla") {
+            GameObject.FindGameObjectWithTag("SkyDrop").GetComponent<SkyDrop>().CancelInvoke("StartSkyDrop");
+            GameObject[] skyDrops = GameObject.FindGameObjectsWithTag("SkyDrop");
+            foreach(GameObject skyDropObject in skyDrops)
+            GameObject.Destroy(skyDropObject);   
+        }
+                   
         Death();    
     }
 }

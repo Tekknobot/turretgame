@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     }
 
     void Update() {
-        SumScore.SaveHighScore();
+        SumScore.SaveHighScore();         
     }
 
     void OnTriggerEnter2D(Collider2D col) {
@@ -47,9 +47,9 @@ public class Bullet : MonoBehaviour
         }       
 
         Destroy(gameObject);
-    }
+    }    
 
     void OnBecameInvisible() {
         Destroy(gameObject);
-    }        
+    }           
 }

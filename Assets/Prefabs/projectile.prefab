@@ -52,6 +52,7 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: -3503174171981221460}
   damage: 1
+  player: {fileID: 5185620909583790759, guid: 5de4e3ec0d8520c4ebb80c2895157921, type: 3}
 --- !u!212 &432854206346078262
 SpriteRenderer:
   m_ObjectHideFlags: 0

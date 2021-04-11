@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a813d06cd127bf41a91165c3d481baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 300
   currentHealth: 0
   explosionPrefab: {fileID: 4715538549366862638, guid: 9f5f77952074238479bee3c40fb48756,
     type: 3}
@@ -125,6 +125,7 @@ MonoBehaviour:
   skyDrop: {fileID: 0}
   skyDrop2: {fileID: 0}
   skyDropEmitter: {fileID: 0}
+  bulletEmitter: {fileID: 0}
 --- !u!114 &5705093938014163627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6230381967318536065, guid: c8a3b220722dccc42ad811ba7179809e,
+  m_Sprite: {fileID: -6689067527547040705, guid: f413f004c4546b9468eb7623c4223397,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -216,7 +217,7 @@ Animator:
   m_GameObject: {fileID: 5705093938014163646}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 823248d701c9775448080a7d0e3d5f39, type: 2}
+  m_Controller: {fileID: 9100000, guid: c44e935e8544b234896b4e591e338e36, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -242,7 +243,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 13, y: 13}
+    oldSize: {x: 11.0625, y: 5.5625}
     newSize: {x: 13, y: 7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

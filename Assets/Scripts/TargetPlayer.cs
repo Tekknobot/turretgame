@@ -19,6 +19,8 @@ public class TargetPlayer : MonoBehaviour
     public Text hitPointsText;
     public float curHealthFloat;
 
+    public Camera cam;
+
     void Start() {
 		currentHealth = maxHealth;
 		//healthBar.SetMaxHealth(maxHealth);
@@ -48,6 +50,7 @@ public class TargetPlayer : MonoBehaviour
         currentHealth -= amount;
         GetComponent<flash>().Flash();
         //healthBar.SetHealth(currentHealth);
+        cam.GetComponent<CameraShake>().shaketrue = true;
         if (currentHealth <= 0f)
         {
             StartCoroutine(Wait());

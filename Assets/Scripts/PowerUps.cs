@@ -9,6 +9,9 @@ public class PowerUps : MonoBehaviour
     public GameObject normalFireSFX;
     public GameObject multiFireSFX;
 
+    public GameObject item;
+    public GameObject itemEmitter;
+
     public float powerUpTime = 0;
     public float multiFireTime = 0;
     public bool hasPowerup = false;
@@ -16,12 +19,16 @@ public class PowerUps : MonoBehaviour
 
     public Text omStatusText;
     public Text arrowStatusText;
+    public Text streakStatusText; 
+
+    float varTime;  
 
     // Start is called before the first frame update
     void Start()
     {
         omStatusText = GameObject.Find("OmStatus").GetComponent<Text>();
         arrowStatusText = GameObject.Find("ArrowStatus").GetComponent<Text>();
+        streakStatusText = GameObject.Find("StreakStatus").GetComponent<Text>();
     }
 
     // Start is called before the first frame update
@@ -46,10 +53,19 @@ public class PowerUps : MonoBehaviour
                 hasArrow = false;
             }
         }
-        arrowStatusText.text = Mathf.Round((multiFireTime)) + " multi";             
+        arrowStatusText.text = Mathf.Round((multiFireTime)) + " multi"; 
+
+        varTime += Time.deltaTime;
+        streakStatusText.text = Mathf.Round((varTime)) + "/30 Time"; 
+        if(varTime > 30) {
+            Instantiate(item, itemEmitter.transform.position, Quaternion.identity);
+            varTime = 0;
+        }        
     }
 
     void OnTriggerEnter2D(Collider2D col) {   
+        varTime = 0;
+
         if(col.tag == "Om") {
             powerUpTime += 16;
             hasPowerup = true;
@@ -82,7 +98,6 @@ public class PowerUps : MonoBehaviour
         yield return new WaitUntil(() => powerUpTime <= 0);
         GetComponent<SpriteRenderer>().material.SetColor("_FlashColor", Color.red);
         GetComponent<flash>().flashDuration = 0.1f;   
-       
         hasPowerup = false;       
         transform.GetChild(2).gameObject.GetComponent<Shooting>().fireRate = 5f;            
     } 

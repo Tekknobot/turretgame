@@ -72,13 +72,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthAmount: 10
   sfx: {fileID: 152738540901050875, guid: e528931a3eb3cfd429633cb7bbbc0d87, type: 3}
-  rapidFireSFX: {fileID: 152738540901050875, guid: 80c6cf2286d654047aef92d537d267b4,
-    type: 3}
-  normalFireSFX: {fileID: 152738540901050875, guid: e4d5a57c3fed35041baa80dbad9ad06c,
-    type: 3}
-  flash: {fileID: 2100000, guid: 367c241314493724685a071f8450b0cc, type: 2}
-  swapColor: {fileID: 2100000, guid: 37da93c16bb27084787c615b18773e6c, type: 2}
-  rapidFireTime: 0
 --- !u!1 &7222256567538037478
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +87,7 @@ GameObject:
   - component: {fileID: 7222256567538037487}
   - component: {fileID: 7222256567538037484}
   - component: {fileID: 7222256567538037485}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 7222256567538037484}
   - component: {fileID: 7222256567538037485}
   - component: {fileID: 1169354341528849624}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RapidFirePowerUp
   m_TagString: Om
   m_Icon: {fileID: 0}
