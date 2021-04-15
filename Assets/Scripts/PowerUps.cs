@@ -21,7 +21,8 @@ public class PowerUps : MonoBehaviour
     public Text arrowStatusText;
     public Text streakStatusText; 
 
-    float varTime;  
+    float varTime;
+    public int continues;  
 
     // Start is called before the first frame update
     void Start()
@@ -56,8 +57,8 @@ public class PowerUps : MonoBehaviour
         arrowStatusText.text = Mathf.Round((multiFireTime)) + " multi"; 
 
         varTime += Time.deltaTime;
-        streakStatusText.text = Mathf.Round((varTime)) + "/30 Time"; 
-        if(varTime > 30) {
+        streakStatusText.text = Mathf.Round((varTime)) + "/60"; 
+        if(varTime > 60) {
             Instantiate(item, itemEmitter.transform.position, Quaternion.identity);
             varTime = 0;
         }        
@@ -94,6 +95,10 @@ public class PowerUps : MonoBehaviour
         if (col.tag == "EnemyBullet") {
             varTime = 0;
         }
+
+        if (col.tag == "Star") {
+            continues += 1;
+        }        
     }
 
     IEnumerator DefaultFireRate(Collider2D col) {

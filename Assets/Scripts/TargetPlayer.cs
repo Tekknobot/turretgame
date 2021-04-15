@@ -43,6 +43,10 @@ public class TargetPlayer : MonoBehaviour
         if (currentHealth > maxHealth) {
             currentHealth = maxHealth;
         }
+
+        if (currentHealth > 0) {
+            GetComponent<SpriteRenderer>().enabled = true;
+        }
     }
 
     public void TakeDamagePlayer (int amount)
@@ -60,7 +64,8 @@ public class TargetPlayer : MonoBehaviour
     void Death()
     {     
         Instantiate(explosion, transform.position, Quaternion.identity);    
-        Destroy(gameObject);    
+        GetComponent<SpriteRenderer>().enabled = false;
+        //Destroy(gameObject);    
     }
 
     IEnumerator Wait() {

@@ -607,13 +607,16 @@ MonoBehaviour:
     type: 3}
   multiFireSFX: {fileID: 152738540901050875, guid: 41ef99b5bbca7324382f5145d089c783,
     type: 3}
+  item: {fileID: 7222256567538037478, guid: 07614b0efd29e9243bf57f6eaa18b4e0, type: 3}
+  itemEmitter: {fileID: 0}
   powerUpTime: 0
   multiFireTime: 0
   hasPowerup: 0
   hasArrow: 0
   omStatusText: {fileID: 0}
   arrowStatusText: {fileID: 0}
-  bullet: {fileID: 0}
+  streakStatusText: {fileID: 0}
+  continues: 0
 --- !u!1 &5185620909755301392
 GameObject:
   m_ObjectHideFlags: 0

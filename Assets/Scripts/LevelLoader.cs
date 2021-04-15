@@ -13,6 +13,9 @@ public class LevelLoader : MonoBehaviour
     public Button playButton;
     public Button quitButton;
 
+    public GameObject star;
+    public GameObject continueSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +31,16 @@ public class LevelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<TargetPlayer>().currentHealth <= 0 && SceneManager.GetActiveScene().buildIndex == 1) {
+        if (player.GetComponent<TargetPlayer>().currentHealth <= 0 && player.GetComponent<PowerUps>().continues <= 0 && SceneManager.GetActiveScene().buildIndex == 1) {
             LoadNextLevel();
+        }
+        
+        if (player.GetComponent<TargetPlayer>().currentHealth <= 0 && player.GetComponent<PowerUps>().continues >= 1) {
+            player.GetComponent<TargetPlayer>().currentHealth = 50;
+            player.GetComponent<PowerUps>().continues -= 1;
+            GameObject continueStar = Instantiate(star, player.transform.position + new Vector3(0,1,0), Quaternion.identity) as GameObject;
+            continueStar.GetComponent<Rigidbody2D>().gravityScale = -1;
+            Instantiate(continueSFX, transform.position, Quaternion.identity);
         }
 
         if (Input.GetButtonDown("Fire1") && SceneManager.GetActiveScene().buildIndex == 2) {

@@ -14,6 +14,7 @@ TagManager:
   - SkyDrop
   - Om
   - ArrowHead
+  - Star
   layers:
   - Default
   - TransparentFX
