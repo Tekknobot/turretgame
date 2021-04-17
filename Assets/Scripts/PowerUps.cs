@@ -20,6 +20,9 @@ public class PowerUps : MonoBehaviour
     public Text omStatusText;
     public Text arrowStatusText;
     public Text streakStatusText; 
+    public Text streakCount;
+
+    public GameObject dialogueManager;
 
     float varTime;
     public int continues;  
@@ -30,6 +33,7 @@ public class PowerUps : MonoBehaviour
         omStatusText = GameObject.Find("OmStatus").GetComponent<Text>();
         arrowStatusText = GameObject.Find("ArrowStatus").GetComponent<Text>();
         streakStatusText = GameObject.Find("StreakStatus").GetComponent<Text>();
+        streakCount = GameObject.Find("StreakCount").GetComponent<Text>();
     }
 
     // Start is called before the first frame update
@@ -62,6 +66,12 @@ public class PowerUps : MonoBehaviour
             Instantiate(item, itemEmitter.transform.position, Quaternion.identity);
             varTime = 0;
         }        
+
+        if(dialogueManager.GetComponent<DialogueManager>().sentences.Count >= 1) {
+            varTime = 0;
+        }
+
+        streakCount.text = continues + " Stars";
     }
 
     void OnTriggerEnter2D(Collider2D col) {   

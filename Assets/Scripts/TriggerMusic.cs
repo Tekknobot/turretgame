@@ -27,8 +27,6 @@ public class TriggerMusic : MonoBehaviour
     public bool songChanged4 = false;
     public bool songChanged5 = false;    
 
-    public GameObject DangerUI;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -46,60 +44,43 @@ public class TriggerMusic : MonoBehaviour
         if (songChanged0 == false) {
             if (bomber.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song1);
-                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged0 = true;
-                StartCoroutine(WaitforDangerUI());
             }
         }
 
         if (songChanged1 == false) {
             if (pharaoh.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song2);
-                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged1 = true;
-                StartCoroutine(WaitforDangerUI());
             }
         }
 
         if (songChanged2 == false) {
             if (alpha.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song3);
-                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged2 = true;
-                StartCoroutine(WaitforDangerUI());
             }
         }
 
         if (songChanged3 == false) {
             if (mech.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song4);
-                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged3 = true;
-                StartCoroutine(WaitforDangerUI());
             }
         }  
 
         if (songChanged4 == false) {
             if (lunatic.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song5);
-                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged4 = true;
-                StartCoroutine(WaitforDangerUI());
             }
         }    
 
         if (songChanged5 == false) {
             if (mechZilla.activeSelf) {
                 GetComponent<CrossFadeMusicManager>().ChangeSong(song6);
-                DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
                 songChanged5 = true;
-                StartCoroutine(WaitforDangerUI());
             }
         }  
-    }
-
-    IEnumerator WaitforDangerUI() {
-        yield return new  WaitForSeconds(3);
-        DangerUI.GetComponent<MoveRect>().hasTargetMoved = true;
     }
 }
