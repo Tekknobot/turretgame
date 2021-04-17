@@ -19,13 +19,7 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0) {
-            Button playbtn = playButton.GetComponent<Button>();
-            playbtn.onClick.AddListener(PlayOnClick);
 
-            Button quitbtn = quitButton.GetComponent<Button>();
-            quitbtn.onClick.AddListener(QuitOnClick);        
-        }
     }
 
     // Update is called once per frame
@@ -64,11 +58,7 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(0));
     }    
 
-    void PlayOnClick(){
-        LoadFirstLevel();
-    }      
-
-    void QuitOnClick(){
+    public void QuitOnClick(){
         Application.Quit();
     }         
 
