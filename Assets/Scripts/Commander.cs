@@ -103,6 +103,19 @@ public class Commander : MonoBehaviour
         DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
         yield return new WaitForSeconds(3);
         DangerUI.GetComponent<MoveRect>().hasTargetMoved = true;       
-        sixthBoss.SetActive(true);                             
+        sixthBoss.SetActive(true);  
+        yield return new WaitUntil(()=> !sixthBoss);
+        GetComponent<DialogueTrigger>().dialogue.sentences[0] = "Wow! Good job!";
+        GetComponent<DialogueTrigger>().dialogue.sentences[1] = "You did it. You've completed the demo.";
+        GetComponent<DialogueTrigger>().dialogue.sentences[2] = "There's more to come later this year.";
+        GetComponent<DialogueTrigger>().dialogue.sentences[3] = "Take care and be safe.";
+        GetComponent<DialogueTrigger>().dialogue.sentences[4] = "Bye, for now.";        
+        GetComponent<DialogueTrigger>().TriggerDialogue();
+        yield return new WaitUntil(()=> dialogueManager.GetComponent<DialogueManager>().sentences.Count == 0);
+        yield return new WaitForSeconds(3);
+        dialogueManager.GetComponent<DialogueManager>().EndDialogue();
+        DangerUI.GetComponent<MoveRect>().hasTargetMoved = false;
+        yield return new WaitForSeconds(3);
+        DangerUI.GetComponent<MoveRect>().hasTargetMoved = true;                                     
     }  
 }
